@@ -1393,3 +1393,111 @@
     }
 }
 /*** About Page Redesign End ***/
+/*** About Page Start ***/
+
+/* Mission & Vision */
+.mv-item {
+    transition: 0.5s;
+}
+
+.mv-item:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, .07);
+}
+
+.mv-icon {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background: var(--bs-white);
+    color: var(--bs-primary);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 26px;
+    transition: 0.5s;
+}
+
+.mv-item:hover .mv-icon {
+    background: var(--bs-primary);
+    color: var(--bs-white);
+}
+
+/* Our Goals */
+.goal-item {
+    transition: 0.5s;
+}
+
+.goal-item:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, .07);
+}
+
+.goal-icon {
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    background: var(--bs-light);
+    color: var(--bs-primary);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    transition: 0.5s;
+}
+
+.goal-item:hover .goal-icon {
+    background: var(--bs-primary);
+    color: var(--bs-white);
+}
+
+/* Our Objectives */
+.objective-icon {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background: var(--bs-light);
+    color: var(--bs-primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+}
+
+/* Key Benefits */
+.benefit-item {
+    transition: 0.5s;
+}
+
+.benefit-item:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, .07);
+}
+
+.benefit-icon {
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    background: var(--bs-light);
+    color: var(--bs-primary);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+}
+
+/* Stats */
+.stats {
+    background: var(--bs-primary);
+}
+
+.stats h4 {
+    color: rgba(255, 255, 255, .85);
+}
+
+/* Why Choose Us */
+.why-choose {
+    background: var(--bs-white);
+}
+
+/*** About Page End ***/
