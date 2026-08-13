@@ -287,3 +287,59 @@ $(".clients-carousel").owlCarousel({
     }, false);
 
 })();
+
+
+// Contact Form — Web3Forms Integration
+(function () {
+    "use strict";
+
+    const form = document.getElementById('contactForm');
+    if (!form) return;
+
+    const statusEl = document.getElementById('contactFormStatus');
+    const submitBtn = form.querySelector('button[type="submit"]');
+
+    form.addEventListener('submit', function (e) {
+        e.preventDefault();
+        e.stopPropagation();
+
+        if (!form.checkValidity()) {
+            form.classList.add('was-validated');
+            return;
+        }
+
+        const originalBtnText = submitBtn.innerHTML;
+        submitBtn.disabled = true;
+        submitBtn.innerHTML = 'Sending...';
+        statusEl.textContent = '';
+        statusEl.className = '';
+
+        const formData = new FormData(form);
+
+        fetch('https://api.web3forms.com/submit', {
+            method: 'POST',
+            body: formData
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.success) {
+                statusEl.textContent = "Thank you! Your message has been sent successfully.";
+                statusEl.className = "text-success mt-2";
+                form.reset();
+                form.classList.remove('was-validated');
+            } else {
+                statusEl.textContent = "Something went wrong. Please try again or email us directly.";
+                statusEl.className = "text-danger mt-2";
+            }
+        })
+        .catch(() => {
+            statusEl.textContent = "Network error. Please check your connection and try again.";
+            statusEl.className = "text-danger mt-2";
+        })
+        .finally(() => {
+            submitBtn.disabled = false;
+            submitBtn.innerHTML = originalBtnText;
+        });
+    }, false);
+
+})();
