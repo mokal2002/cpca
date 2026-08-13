@@ -1501,3 +1501,233 @@
 }
 
 /*** About Page End ***/
+
+
+
+
+
+
+
+/*** Accounting Service Page Start ***/
+
+/* Sidebar nav */
+.service-nav .nav-link {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-align: left;
+    padding: 15px 20px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    background: var(--bs-white);
+    color: var(--bs-dark);
+    font-weight: 500;
+    transition: 0.4s;
+}
+
+.service-nav .nav-link i {
+    font-size: 16px;
+    width: 20px;
+    color: var(--bs-primary);
+}
+
+.service-nav .nav-link:hover {
+    background: rgba(1, 95, 201, .08);
+}
+
+.service-nav .nav-link.active {
+    background: var(--bs-primary);
+    color: var(--bs-white);
+}
+
+.service-nav .nav-link.active i {
+    color: var(--bs-white);
+}
+
+/* Tab content panel */
+.service-tab-content {
+    min-height: 380px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, .05);
+}
+
+.service-tab-icon {
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    background: rgba(1, 95, 201, .1);
+    color: var(--bs-primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 26px;
+}
+
+.service-check-list {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0 0;
+}
+
+.service-check-list li {
+    position: relative;
+    padding-left: 28px;
+    margin-bottom: 12px;
+    color: var(--bs-dark);
+}
+
+.service-check-list li::before {
+    content: "\f00c";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    color: var(--bs-primary);
+    position: absolute;
+    left: 0;
+    top: 2px;
+    font-size: 13px;
+}
+
+/* Process steps */
+.process-item {
+    background: var(--bs-light);
+    border-radius: 10px;
+    padding: 40px 25px;
+    height: 100%;
+    transition: 0.5s;
+}
+
+.process-item:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, .07);
+}
+
+.process-number {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: var(--bs-white);
+    color: var(--bs-primary);
+    font-size: 22px;
+    font-weight: 700;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, .06);
+}
+
+/* CTA strip */
+.cta-strip {
+    background: var(--bs-primary);
+}
+
+/* Mobile: sidebar nav becomes horizontal scroll instead of stacked column */
+@media (max-width: 991px) {
+    .service-nav {
+        position: static !important;
+    }
+
+    .service-nav .nav {
+        flex-direction: row !important;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        padding-bottom: 10px;
+    }
+
+    .service-nav .nav-link {
+        white-space: nowrap;
+        flex-shrink: 0;
+    }
+}
+/*** Accounting Service Page End ***/
+
+
+
+
+/*** Compliance Service Page Start ***/
+
+/* Key Offerings */
+.offering-item {
+    transition: 0.5s;
+}
+
+.offering-item:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, .07);
+}
+
+.offering-icon {
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    background: var(--bs-light);
+    color: var(--bs-primary);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    transition: 0.5s;
+}
+
+.offering-item:hover .offering-icon {
+    background: var(--bs-primary);
+    color: var(--bs-white);
+}
+
+/* Key Benefits chips */
+.benefit-chip {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: var(--bs-light);
+    border-radius: 8px;
+    padding: 15px 20px;
+    height: 100%;
+    font-weight: 500;
+    color: var(--bs-dark);
+    transition: 0.4s;
+}
+
+.benefit-chip i {
+    color: var(--bs-primary);
+    font-size: 18px;
+    flex-shrink: 0;
+}
+
+.benefit-chip:hover {
+    background: rgba(1, 95, 201, .08);
+}
+
+/* Add-on Services */
+.addon-item {
+    transition: 0.5s;
+    border-top: 3px solid transparent;
+}
+
+.addon-item:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, .07);
+    border-top: 3px solid var(--bs-primary);
+}
+
+.addon-icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: var(--bs-light);
+    color: var(--bs-primary);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    transition: 0.5s;
+}
+
+.addon-item:hover .addon-icon {
+    background: var(--bs-primary);
+    color: var(--bs-white);
+}
+
+/* CTA strip (shared with accounting page — skip if already added) */
+.cta-strip {
+    background: var(--bs-primary);
+}
+/*** Compliance Service Page End ***/
