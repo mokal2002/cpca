@@ -1154,3 +1154,242 @@
     font-weight: 600;
 }
 /*** Job Application Form End ***/
+
+
+
+
+/*** About Page Redesign Start ***/
+
+/* Gradient accent text */
+.text-gradient {
+    background: linear-gradient(90deg, var(--bs-primary), #00c6ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* Floating background shapes */
+.about-intro {
+    background: var(--bs-light);
+}
+
+.about-shape {
+    position: absolute;
+    border-radius: 50%;
+    opacity: 0.08;
+    background: var(--bs-primary);
+    z-index: 1;
+}
+
+.shape-1 {
+    width: 300px;
+    height: 300px;
+    top: -100px;
+    right: -80px;
+    animation: floatY 6s ease-in-out infinite;
+}
+
+.shape-2 {
+    width: 150px;
+    height: 150px;
+    bottom: 50px;
+    left: -50px;
+    animation: floatY 8s ease-in-out infinite reverse;
+}
+
+.shape-3 {
+    width: 90px;
+    height: 90px;
+    top: 40%;
+    left: 45%;
+    animation: floatY 5s ease-in-out infinite;
+}
+
+@keyframes floatY {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-25px); }
+}
+
+/* About image + floating badge */
+.about-img-wrap {
+    animation: fadeScale 1s ease;
+}
+
+.about-main-img {
+    box-shadow: 0 20px 50px rgba(0, 0, 0, .12);
+}
+
+.about-badge {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    background: var(--bs-white);
+    border-radius: 12px;
+    padding: 18px 25px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, .15);
+    animation: floatY 4s ease-in-out infinite;
+}
+
+.about-badge-icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: var(--bs-primary);
+    color: var(--bs-white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    flex-shrink: 0;
+}
+
+.about-badge h3 {
+    color: var(--bs-primary);
+    font-weight: 700;
+}
+
+@keyframes fadeScale {
+    0% { opacity: 0; transform: scale(0.95); }
+    100% { opacity: 1; transform: scale(1); }
+}
+
+/* Stats strip */
+.stats-strip {
+    background: var(--bs-primary);
+}
+
+.stat-box {
+    color: var(--bs-white);
+}
+
+.stat-icon {
+    font-size: 34px;
+    margin-bottom: 15px;
+    opacity: 0.85;
+    display: inline-block;
+    transition: transform 0.4s ease;
+}
+
+.stat-box:hover .stat-icon {
+    transform: translateY(-8px) scale(1.1);
+}
+
+.stats-strip .counter-counting span {
+    color: var(--bs-white);
+}
+
+/* Mission / Vision / Values cards */
+.mvv-section {
+    background: var(--bs-white);
+}
+
+.mvv-card {
+    background: var(--bs-light);
+    border-radius: 16px;
+    height: 100%;
+    transition: all 0.45s ease;
+    transform-style: preserve-3d;
+}
+
+.mvv-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 25px 50px rgba(1, 95, 201, .15);
+    background: var(--bs-white);
+}
+
+.mvv-card-highlight {
+    background: var(--bs-primary);
+    color: var(--bs-white);
+}
+
+.mvv-card-highlight h4,
+.mvv-card-highlight p {
+    color: var(--bs-white);
+}
+
+.mvv-card-highlight:hover {
+    background: var(--bs-dark);
+}
+
+.mvv-icon {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: var(--bs-white);
+    color: var(--bs-primary);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 32px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, .08);
+    transition: transform 0.5s ease;
+}
+
+.mvv-card:hover .mvv-icon {
+    transform: rotateY(360deg);
+}
+
+.mvv-card-highlight .mvv-icon {
+    color: var(--bs-primary);
+}
+
+/* Why Choose Us */
+.why-choose {
+    background: var(--bs-light);
+}
+
+.why-item {
+    background: var(--bs-white);
+    border-radius: 12px;
+    padding: 30px;
+    height: 100%;
+    transition: 0.4s ease;
+    border-left: 3px solid transparent;
+}
+
+.why-item:hover {
+    border-left: 3px solid var(--bs-primary);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, .08);
+    transform: translateX(5px);
+}
+
+.why-icon {
+    width: 55px;
+    height: 55px;
+    border-radius: 10px;
+    background: rgba(1, 95, 201, .1);
+    color: var(--bs-primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    margin-bottom: 15px;
+    transition: 0.4s ease;
+}
+
+.why-item:hover .why-icon {
+    background: var(--bs-primary);
+    color: var(--bs-white);
+}
+
+/* CTA section */
+.cta-section {
+    background: linear-gradient(135deg, var(--bs-primary), var(--bs-dark));
+}
+
+/* Responsive tweaks */
+@media (max-width: 767px) {
+    .about-badge {
+        position: static;
+        margin-top: 15px;
+        justify-content: center;
+    }
+
+    .about-shape {
+        opacity: 0.05;
+    }
+}
+/*** About Page Redesign End ***/
