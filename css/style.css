@@ -1731,3 +1731,455 @@
     background: var(--bs-primary);
 }
 /*** Compliance Service Page End ***/
+
+/*** Service Page Redesign Start ***/
+
+/* Reuse gradient text + floating shapes from About page */
+.text-gradient {
+    background: linear-gradient(90deg, var(--bs-primary), #00c6ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.service-intro {
+    background: var(--bs-light);
+}
+
+.about-shape {
+    position: absolute;
+    border-radius: 50%;
+    opacity: 0.08;
+    background: var(--bs-primary);
+    z-index: 1;
+}
+
+.shape-1 {
+    width: 280px;
+    height: 280px;
+    top: -100px;
+    right: -70px;
+    animation: floatY 6s ease-in-out infinite;
+}
+
+.shape-2 {
+    width: 140px;
+    height: 140px;
+    bottom: 30px;
+    left: -40px;
+    animation: floatY 8s ease-in-out infinite reverse;
+}
+
+@keyframes floatY {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-25px); }
+}
+
+/* Service hero image + badge */
+.service-img-wrap {
+    animation: fadeScale 1s ease;
+}
+
+.service-main-img {
+    box-shadow: 0 20px 50px rgba(0, 0, 0, .12);
+}
+
+.service-badge {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    background: var(--bs-white);
+    border-radius: 12px;
+    padding: 18px 25px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, .15);
+    animation: floatY 4s ease-in-out infinite;
+}
+
+.service-badge-icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: var(--bs-primary);
+    color: var(--bs-white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    flex-shrink: 0;
+}
+
+.service-badge h3 {
+    color: var(--bs-primary);
+    font-weight: 700;
+}
+
+@keyframes fadeScale {
+    0% { opacity: 0; transform: scale(0.95); }
+    100% { opacity: 1; transform: scale(1); }
+}
+
+/* Flip Cards */
+.flip-card {
+    perspective: 1500px;
+    height: 260px;
+}
+
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s cubic-bezier(0.4, 0.2, 0.2, 1);
+    transform-style: preserve-3d;
+    border-radius: 14px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, .08);
+}
+
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 14px;
+    padding: 35px 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.flip-card-front {
+    background: var(--bs-white);
+}
+
+.flip-icon {
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    background: rgba(1, 95, 201, .1);
+    color: var(--bs-primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 26px;
+    margin-bottom: 18px;
+    transition: 0.4s ease;
+}
+
+.flip-card:hover .flip-icon {
+    background: var(--bs-primary);
+    color: var(--bs-white);
+    transform: scale(1.1);
+}
+
+.flip-hint {
+    font-size: 12px;
+    color: var(--bs-primary);
+    margin-top: 15px;
+    opacity: 0.75;
+}
+
+.flip-card-back {
+    background: var(--bs-primary);
+    color: var(--bs-white);
+    transform: rotateY(180deg);
+    justify-content: center;
+    align-items: flex-start;
+    text-align: left;
+}
+
+.flip-card-back h5 {
+    color: var(--bs-white);
+    width: 100%;
+    text-align: center;
+}
+
+.flip-card-back .service-check-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+
+.flip-card-back .service-check-list li {
+    font-size: 13.5px;
+    line-height: 1.6;
+    margin-bottom: 8px;
+    padding-left: 22px;
+    position: relative;
+}
+
+.flip-card-back .service-check-list li::before {
+    content: "\f00c";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    position: absolute;
+    left: 0;
+    top: 2px;
+    font-size: 11px;
+    color: var(--bs-white);
+}
+
+/* Tap-to-flip on touch devices (no hover) */
+@media (hover: none) {
+    .flip-card.flipped .flip-card-inner {
+        transform: rotateY(180deg);
+    }
+
+    .flip-card:hover .flip-card-inner {
+        transform: none;
+    }
+}
+
+/* Process timeline connector */
+.process-timeline {
+    position: relative;
+}
+
+.process-item {
+    background: var(--bs-white);
+    border-radius: 12px;
+    padding: 35px 20px;
+    height: 100%;
+    position: relative;
+    transition: 0.4s ease;
+}
+
+.process-item:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, .08);
+}
+
+.process-number {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--bs-primary), #00c6ff);
+    color: var(--bs-white);
+    font-size: 22px;
+    font-weight: 700;
+}
+
+@media (min-width: 992px) {
+    .process-item::after {
+        content: "";
+        position: absolute;
+        top: 55px;
+        right: -20px;
+        width: 40px;
+        height: 2px;
+        background: repeating-linear-gradient(90deg, var(--bs-primary) 0, var(--bs-primary) 6px, transparent 6px, transparent 12px);
+    }
+
+    .col-lg-3:last-child .process-item::after {
+        display: none;
+    }
+}
+
+/* CTA */
+.cta-section {
+    background: linear-gradient(135deg, var(--bs-primary), var(--bs-dark));
+}
+
+@media (max-width: 767px) {
+    .flip-card {
+        height: 240px;
+    }
+
+    .service-badge {
+        position: static;
+        margin-top: 15px;
+        justify-content: center;
+    }
+}
+/*** Service Page Redesign End ***/
+
+/*** Accounting Services Redesign Start ***/
+
+/* Hero image frame */
+.service-hero {
+    background: var(--bs-white);
+}
+
+.service-hero-frame {
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 25px 60px rgba(0, 0, 0, .1);
+}
+
+/* Intro */
+.service-detail-intro {
+    background: var(--bs-white);
+}
+
+/* Key Offering panel */
+.key-offering-section {
+    background: var(--bs-light);
+}
+
+.key-offering-panel {
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 20px 50px rgba(1, 95, 201, .12);
+}
+
+.key-offering-img {
+    height: 100%;
+    min-height: 260px;
+}
+
+.key-offering-img img {
+    object-fit: cover;
+    height: 100%;
+}
+
+.key-offering-content {
+    background: linear-gradient(135deg, var(--bs-primary), var(--bs-dark));
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.key-offering-label {
+    display: inline-block;
+    color: var(--bs-white);
+    opacity: 0.75;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 13px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+/* Key Benefits — numbered tiles */
+.benefits-strip {
+    background: var(--bs-white);
+}
+
+.benefit-tile {
+    background: var(--bs-light);
+    border-radius: 12px;
+    padding: 25px 18px;
+    height: 100%;
+    text-align: center;
+    transition: 0.4s ease;
+}
+
+.benefit-tile:hover {
+    background: var(--bs-primary);
+    transform: translateY(-6px);
+}
+
+.benefit-tile:hover p,
+.benefit-tile:hover .benefit-num {
+    color: var(--bs-white);
+}
+
+.benefit-num {
+    display: block;
+    font-size: 26px;
+    font-weight: 700;
+    color: var(--bs-primary);
+    margin-bottom: 10px;
+    transition: 0.4s ease;
+    font-family: 'DM Sans', sans-serif;
+}
+
+.benefit-tile p {
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--bs-dark);
+    transition: 0.4s ease;
+}
+
+/* Add-on Services — connected list */
+.addon-services {
+    background: var(--bs-light);
+}
+
+.addon-row {
+    display: flex;
+    gap: 25px;
+    background: var(--bs-white);
+    border-radius: 14px;
+    padding: 30px;
+    margin-bottom: 20px;
+    transition: 0.4s ease;
+    position: relative;
+}
+
+.addon-row:last-child {
+    margin-bottom: 0;
+}
+
+.addon-row:hover {
+    box-shadow: 0 20px 40px rgba(0, 0, 0, .08);
+    transform: translateX(6px);
+}
+
+.addon-row-icon {
+    flex-shrink: 0;
+    width: 60px;
+    height: 60px;
+    border-radius: 14px;
+    background: rgba(1, 95, 201, .1);
+    color: var(--bs-primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    transition: 0.4s ease;
+}
+
+.addon-row:hover .addon-row-icon {
+    background: var(--bs-primary);
+    color: var(--bs-white);
+}
+
+.addon-row-content h5 {
+    color: var(--bs-dark);
+}
+
+.addon-row-content p {
+    color: #6c757d;
+    line-height: 1.7;
+}
+
+/* Responsive */
+@media (max-width: 767px) {
+    .key-offering-img {
+        min-height: 200px;
+    }
+
+    .key-offering-content {
+        padding: 30px !important;
+        text-align: center;
+    }
+
+    .addon-row {
+        flex-direction: column;
+        text-align: center;
+        padding: 25px;
+    }
+
+    .addon-row-icon {
+        margin: 0 auto;
+    }
+
+    .benefit-tile {
+        padding: 20px 12px;
+    }
+}
+/*** Accounting Services Redesign End ***/
