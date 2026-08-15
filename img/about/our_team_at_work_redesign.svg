@@ -1,0 +1,144 @@
+<svg viewBox="0 0 600 400" width="600" height="400" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#F4F9FF"/>
+      <stop offset="1" stop-color="#DCEEFF"/>
+    </linearGradient>
+    <linearGradient id="blue" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#4FA3F7"/>
+      <stop offset="1" stop-color="#015FC9"/>
+    </linearGradient>
+    <linearGradient id="gold" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#FFD36A"/>
+      <stop offset="1" stop-color="#FFB648"/>
+    </linearGradient>
+    <filter id="shadow" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="7" stdDeviation="8" flood-color="#0A1F44" flood-opacity=".13"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="600" height="400" rx="22" fill="url(#bg)"/>
+  <circle cx="535" cy="58" r="28" fill="#FFB648" opacity=".75"/>
+  <circle cx="52" cy="62" r="17" fill="#4FA3F7" opacity=".18"/>
+  <circle cx="555" cy="325" r="22" fill="#3FAE6B" opacity=".16"/>
+
+  <!-- Decorative blobs -->
+  <path d="M38 270 C55 220 92 210 126 232 C150 248 145 292 120 314 C85 345 48 326 38 270Z"
+        fill="#CFE4FB" opacity=".7"/>
+  <path d="M455 80 C500 55 548 80 556 125 C562 160 530 184 492 177 C451 170 430 119 455 80Z"
+        fill="#EAF3FF"/>
+
+  <!-- Wall growth chart -->
+  <g transform="translate(470 118)" filter="url(#shadow)">
+    <rect x="-52" y="-48" width="104" height="78" rx="10" fill="#fff" stroke="#CFE4FB" stroke-width="2"/>
+    <path d="M-36 10 L-12 -8 L4 2 L30 -24" fill="none" stroke="#015FC9" stroke-width="4" stroke-linecap="round"/>
+    <path d="M22 -24 H30 V-16" fill="none" stroke="#015FC9" stroke-width="4" stroke-linecap="round"/>
+    <rect x="-35" y="14" width="10" height="8" rx="2" fill="#CFE4FB"/>
+    <rect x="-18" y="7" width="10" height="15" rx="2" fill="#4FA3F7"/>
+    <rect x="-1" y="-1" width="10" height="23" rx="2" fill="#015FC9"/>
+    <rect x="16" y="5" width="10" height="17" rx="2" fill="#FFB648"/>
+  </g>
+
+  <!-- Floor -->
+  <ellipse cx="300" cy="363" rx="235" ry="15" fill="#0A1F44" opacity=".09"/>
+
+  <!-- Team table -->
+  <g filter="url(#shadow)">
+    <rect x="83" y="274" width="434" height="17" rx="8" fill="#0E2A5C"/>
+    <rect x="106" y="291" width="14" height="66" rx="4" fill="#0A1F44"/>
+    <rect x="480" y="291" width="14" height="66" rx="4" fill="#0A1F44"/>
+  </g>
+
+  <!-- Laptop -->
+  <g transform="translate(230 263)">
+    <rect x="-48" y="-40" width="96" height="60" rx="7" fill="#0A1F44"/>
+    <rect x="-40" y="-32" width="80" height="44" rx="3" fill="#EAF3FF"/>
+    <path d="M-58 20 H58 Q60 20 58 27 H-58 Q-60 20-58 20Z" fill="#0E2A5C"/>
+    <rect x="-25" y="-9" width="10" height="19" rx="2" fill="#4FA3F7"/>
+    <rect x="-9" y="-17" width="10" height="27" rx="2" fill="#015FC9"/>
+    <rect x="7" y="-3" width="10" height="13" rx="2" fill="#FFB648"/>
+  </g>
+
+  <!-- Documents -->
+  <g transform="translate(354 263)" filter="url(#shadow)">
+    <rect x="-34" y="-22" width="68" height="49" rx="6" fill="#fff" stroke="#CFE4FB" stroke-width="2"/>
+    <rect x="-23" y="-10" width="42" height="5" rx="2.5" fill="#015FC9"/>
+    <rect x="-23" y="1" width="50" height="4" rx="2" fill="#CFE4FB"/>
+    <rect x="-23" y="10" width="38" height="4" rx="2" fill="#CFE4FB"/>
+    <circle cx="19" cy="20" r="8" fill="#3FAE6B"/>
+    <path d="M15 20 L18 23 L24 16" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round"/>
+  </g>
+
+  <!-- Plant -->
+  <g transform="translate(438 270)">
+    <path d="M0 4 C-25 -4 -27 -25 -6 -34 C9 -25 9 -9 0 4Z" fill="#3FAE6B"/>
+    <path d="M1 0 C14 -13 26 -14 31 -3 C24 8 11 10 1 0Z" fill="#59C583"/>
+    <path d="M0 1 L0 24" stroke="#2B8F59" stroke-width="3"/>
+    <path d="M-15 23 H15 L11 45 H-11Z" fill="#0E2A5C"/>
+  </g>
+
+  <!-- Person 1: seated, working laptop -->
+  <g>
+    <ellipse cx="185" cy="180" rx="23" ry="24" fill="#E7B48C"/>
+    <path d="M163 174 Q185 147 207 174 L207 163 Q185 143 163 163Z" fill="#2B1B12"/>
+    <path d="M151 242 Q154 200 185 193 Q216 200 219 242Z" fill="#015FC9"/>
+    <path d="M170 198 H200 L195 219 H175Z" fill="#fff"/>
+    <path d="M151 209 Q139 222 147 244" fill="none" stroke="#0E2A5C" stroke-width="16" stroke-linecap="round"/>
+    <path d="M216 210 Q229 221 224 241" fill="none" stroke="#0E2A5C" stroke-width="16" stroke-linecap="round"/>
+    <path d="M169 242 L153 274" stroke="#0A1F44" stroke-width="14" stroke-linecap="round"/>
+    <path d="M202 242 L218 274" stroke="#0A1F44" stroke-width="14" stroke-linecap="round"/>
+  </g>
+
+  <!-- Person 2: standing team leader -->
+  <g>
+    <ellipse cx="315" cy="153" rx="23" ry="24" fill="#C88A5E"/>
+    <path d="M293 147 Q315 121 337 147 L337 136 Q315 116 293 136Z" fill="#241209"/>
+    <path d="M281 244 Q284 187 315 181 Q346 187 349 244Z" fill="#4FA3F7"/>
+    <path d="M300 184 H330 L325 207 H305Z" fill="#fff"/>
+    <path d="M286 195 L269 222" stroke="#0E2A5C" stroke-width="15" stroke-linecap="round"/>
+    <path d="M343 194 L367 177" stroke="#0E2A5C" stroke-width="15" stroke-linecap="round"/>
+    <!-- presentation pointer -->
+    <path d="M366 177 L406 139" stroke="#FFB648" stroke-width="3"/>
+  </g>
+
+  <!-- Person 3: seated reviewing documents -->
+  <g>
+    <ellipse cx="417" cy="190" rx="22" ry="23" fill="#E7B48C"/>
+    <path d="M397 182 Q417 160 437 182 L437 173 Q417 155 397 173Z" fill="#3A2418"/>
+    <path d="M386 250 Q389 211 417 204 Q446 211 449 250Z" fill="#FFB648"/>
+    <path d="M404 208 H430 L426 230 H408Z" fill="#0A1F44"/>
+    <path d="M389 223 L368 249" stroke="#0E2A5C" stroke-width="14" stroke-linecap="round"/>
+    <path d="M442 223 L457 247" stroke="#0E2A5C" stroke-width="14" stroke-linecap="round"/>
+    <rect x="355" y="246" width="55" height="8" rx="3" fill="#fff" stroke="#CFE4FB"/>
+  </g>
+
+  <!-- Floating teamwork badge -->
+  <g transform="translate(118 126)" filter="url(#shadow)">
+    <circle r="27" fill="#fff" stroke="#CFE4FB" stroke-width="2"/>
+    <circle cx="-9" cy="-3" r="7" fill="#015FC9"/>
+    <circle cx="9" cy="-3" r="7" fill="#4FA3F7"/>
+    <path d="M-20 14 Q-9 3 0 14 Q9 3 20 14" fill="none" stroke="#3FAE6B" stroke-width="5" stroke-linecap="round"/>
+    <path d="M-8 1 L0 8 L8 1" fill="none" stroke="#FFB648" stroke-width="3" stroke-linecap="round"/>
+  </g>
+
+  <!-- Small idea bulb -->
+  <g transform="translate(285 72)">
+    <circle r="27" fill="#fff" stroke="#CFE4FB" stroke-width="2"/>
+    <path d="M-9 2 Q-13 -12 0 -18 Q13 -12 9 2 Q8 8 4 11 H-4 Q-8 8 -9 2Z" fill="url(#gold)"/>
+    <path d="M-5 16 H5 M-4 21 H4" stroke="#FFB648" stroke-width="3" stroke-linecap="round"/>
+  </g>
+
+  <!-- Checkmark trust badge -->
+  <g transform="translate(92 215)">
+    <circle r="20" fill="#fff" stroke="#CFE4FB" stroke-width="2"/>
+    <circle r="14" fill="#3FAE6B"/>
+    <path d="M-7 0 L-2 6 L8 -7" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+
+  <!-- Team label
+  <g transform="translate(300 330)">
+    <rect x="-73" y="-14" width="146" height="28" rx="14" fill="#fff" opacity=".96"/>
+    <text x="0" y="6" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="700" fill="#0E2A5C">OUR TEAM AT WORK</text>
+  </g> -->
+</svg>
