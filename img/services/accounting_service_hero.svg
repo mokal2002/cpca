@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg"
+     width="600" height="600" viewBox="0 0 600 600">
+
+  <defs>
+    <linearGradient id="navy" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#17324D"/>
+      <stop offset="1" stop-color="#244E6C"/>
+    </linearGradient>
+    <linearGradient id="blue" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#5C87A3"/>
+      <stop offset="1" stop-color="#315F7D"/>
+    </linearGradient>
+    <linearGradient id="gold" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#E0C27A"/>
+      <stop offset="1" stop-color="#B9924A"/>
+    </linearGradient>
+    <linearGradient id="ivory" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#FFFDF7"/>
+      <stop offset="1" stop-color="#F1EBDD"/>
+    </linearGradient>
+    <filter id="shadow" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="12" stdDeviation="14"
+                    flood-color="#17324D" flood-opacity=".16"/>
+    </filter>
+    <filter id="soft" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="6" stdDeviation="7"
+                    flood-color="#17324D" flood-opacity=".13"/>
+    </filter>
+  </defs>
+
+  <!-- Transparent background: no background rectangle -->
+
+  <!-- Elegant decorative arcs -->
+  <path d="M52 420 C85 160 260 55 492 104"
+        fill="none" stroke="#C7A45A" stroke-width="2" opacity=".24"/>
+  <path d="M70 452 C115 215 278 103 515 138"
+        fill="none" stroke="#789483" stroke-width="3" opacity=".16"/>
+  <circle cx="82" cy="125" r="7" fill="#C7A45A" opacity=".65"/>
+  <circle cx="510" cy="116" r="5" fill="#789483" opacity=".6"/>
+
+  <!-- Main floating accounting panel -->
+  <g transform="translate(300 280)" filter="url(#shadow)">
+
+    <!-- Back document -->
+    <g transform="translate(-185 -78) rotate(-7)">
+      <rect x="-55" y="-75" width="145" height="175" rx="14"
+            fill="url(#ivory)" stroke="#D9CCB1" stroke-width="2"/>
+      <rect x="-34" y="-49" width="72" height="9" rx="4"
+            fill="#17324D"/>
+      <rect x="-34" y="-27" width="88" height="5" rx="2.5"
+            fill="#C9C0AF"/>
+      <rect x="-34" y="-13" width="67" height="5" rx="2.5"
+            fill="#D8D0C2"/>
+      <rect x="-34" y="15" width="90" height="42" rx="7"
+            fill="#F7F3E9" stroke="#D8CCB7"/>
+      <path d="M-22 48 L-4 35 L13 42 L31 24 L46 30"
+            fill="none" stroke="#5C87A3" stroke-width="4"
+            stroke-linecap="round" stroke-linejoin="round"/>
+      <circle cx="54" cy="-48" r="13" fill="#789483"/>
+      <path d="M48 -48 L53 -43 L61 -53"
+            fill="none" stroke="#FFFDF7" stroke-width="3"
+            stroke-linecap="round" stroke-linejoin="round"/>
+    </g>
+
+    <!-- Main dashboard -->
+    <rect x="-155" y="-145" width="310" height="225"
+          rx="20" fill="url(#navy)"/>
+
+    <rect x="-140" y="-130" width="280" height="195"
+          rx="12" fill="#FBF9F3"/>
+
+    <!-- Dashboard header -->
+    <rect x="-140" y="-130" width="280" height="43"
+          rx="12" fill="#17324D"/>
+    <circle cx="-117" cy="-108" r="5" fill="#C7A45A"/>
+    <circle cx="-99" cy="-108" r="5" fill="#789483"/>
+    <text x="-77" y="-102"
+          font-family="Arial, sans-serif" font-size="11"
+          font-weight="700" letter-spacing="1"
+          fill="#F7F2E7">FINANCIAL OVERVIEW</text>
+
+    <!-- KPI cards -->
+    <rect x="-121" y="-69" width="78" height="43" rx="8"
+          fill="#F0ECE2"/>
+    <rect x="-33" y="-69" width="78" height="43" rx="8"
+          fill="#F0ECE2"/>
+    <rect x="55" y="-69" width="78" height="43" rx="8"
+          fill="#F0ECE2"/>
+
+    <text x="-109" y="-50" font-family="Arial" font-size="7"
+          fill="#66727C">REVENUE</text>
+    <text x="-109" y="-35" font-family="Arial" font-size="12"
+          font-weight="700" fill="#17324D">₹ 8.4L</text>
+
+    <text x="-21" y="-50" font-family="Arial" font-size="7"
+          fill="#66727C">PAYABLES</text>
+    <text x="-21" y="-35" font-family="Arial" font-size="12"
+          font-weight="700" fill="#17324D">₹ 2.1L</text>
+
+    <text x="67" y="-50" font-family="Arial" font-size="7"
+          fill="#66727C">CASH FLOW</text>
+    <text x="67" y="-35" font-family="Arial" font-size="12"
+          font-weight="700" fill="#17324D">₹ 5.7L</text>
+
+    <!-- Financial chart -->
+    <rect x="-121" y="-12" width="170" height="59" rx="9"
+          fill="#FFFDF7" stroke="#DED6C7" stroke-width="1.5"/>
+    <path d="M-107 34 L-82 20 L-59 26 L-35 7 L-11 15 L14 -7 L35 -18"
+          fill="none" stroke="#315F7D" stroke-width="4"
+          stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M-107 34 L-82 20 L-59 26 L-35 7 L-11 15 L14 -7 L35 -18
+             V34 H-107Z"
+          fill="#5C87A3" opacity=".09"/>
+    <circle cx="35" cy="-18" r="4" fill="#C7A45A"/>
+
+    <!-- Mini bars -->
+    <rect x="62" y="-12" width="59" height="59" rx="9"
+          fill="#FFFDF7" stroke="#DED6C7" stroke-width="1.5"/>
+    <rect x="73" y="20" width="8" height="27" rx="2" fill="#789483"/>
+    <rect x="86" y="11" width="8" height="36" rx="2" fill="#5C87A3"/>
+    <rect x="99" y="2" width="8" height="45" rx="2" fill="#315F7D"/>
+    <rect x="112" y="-8" width="8" height="55" rx="2" fill="#C7A45A"/>
+
+    <!-- Stand -->
+    <rect x="-25" y="80" width="50" height="15" rx="5"
+          fill="#244E6C"/>
+    <path d="M-62 96 H62 Q69 96 69 103 H-69 Q-69 96 -62 96Z"
+          fill="#17324D"/>
+  </g>
+
+  <!-- Calculator -->
+  <g transform="translate(112 403) rotate(-5)" filter="url(#soft)">
+    <rect x="-50" y="-64" width="100" height="128" rx="13"
+          fill="#244E6C"/>
+    <rect x="-35" y="-48" width="70" height="31" rx="6"
+          fill="#F3EFE5"/>
+    <text x="27" y="-28" text-anchor="end"
+          font-family="Arial" font-size="13"
+          font-weight="700" fill="#17324D">₹12,450</text>
+
+    <g fill="#F7F3E9">
+      <rect x="-35" y="-5" width="14" height="14" rx="3"/>
+      <rect x="-14" y="-5" width="14" height="14" rx="3"/>
+      <rect x="7" y="-5" width="14" height="14" rx="3"/>
+      <rect x="-35" y="17" width="14" height="14" rx="3"/>
+      <rect x="-14" y="17" width="14" height="14" rx="3"/>
+      <rect x="7" y="17" width="14" height="14" rx="3"/>
+      <rect x="-35" y="39" width="14" height="14" rx="3"/>
+      <rect x="-14" y="39" width="35" height="14" rx="3"/>
+    </g>
+    <rect x="7" y="39" width="14" height="14" rx="3" fill="#C7A45A"/>
+  </g>
+
+  <!-- Gold coin stack -->
+  <g transform="translate(472 424)" filter="url(#soft)">
+    <ellipse cx="0" cy="45" rx="57" ry="16" fill="#B9924A"/>
+    <rect x="-57" y="28" width="114" height="18" fill="#C7A45A"/>
+    <ellipse cx="0" cy="28" rx="57" ry="16" fill="#E0C27A"/>
+
+    <ellipse cx="-14" cy="9" rx="46" ry="14" fill="#B9924A"/>
+    <rect x="-60" y="-8" width="92" height="17" fill="#C7A45A"/>
+    <ellipse cx="-14" cy="-8" rx="46" ry="14" fill="#E0C27A"/>
+
+    <ellipse cx="20" cy="-28" rx="39" ry="12" fill="#B9924A"/>
+    <rect x="-19" y="-41" width="78" height="14" fill="#C7A45A"/>
+    <ellipse cx="20" cy="-41" rx="39" ry="12" fill="#E0C27A"/>
+
+    <circle cx="20" cy="-41" r="7" fill="none"
+            stroke="#A37C38" stroke-width="2"/>
+    <path d="M17 -47 H23 M20 -48 V-34"
+          stroke="#A37C38" stroke-width="1.8"
+          stroke-linecap="round"/>
+  </g>
+
+  <!-- Accuracy shield -->
+  <g transform="translate(470 115)" filter="url(#soft)">
+    <circle r="45" fill="#FFFDF7" stroke="#D8CCB7" stroke-width="2"/>
+    <path d="M0 -29 L29 -18 V4
+             C29 25 15 38 0 45
+             C-15 38 -29 25 -29 4 V-18Z"
+          fill="url(#blue)"/>
+    <path d="M-13 2 L-4 11 L15 -11"
+          fill="none" stroke="#FFFDF7" stroke-width="6"
+          stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="30" cy="-28" r="10" fill="#C7A45A"/>
+  </g>
+
+  <!-- Accounting books -->
+  <g transform="translate(420 500)" filter="url(#soft)">
+    <rect x="-92" y="-18" width="145" height="25" rx="5"
+          fill="#17324D"/>
+    <rect x="-83" y="-48" width="145" height="25" rx="5"
+          fill="#5C87A3"/>
+    <rect x="-74" y="-78" width="145" height="25" rx="5"
+          fill="#C7A45A"/>
+
+    <text x="-55" y="-1" font-family="Arial" font-size="10"
+          font-weight="700" fill="#F7F2E7">REPORTS</text>
+    <text x="-46" y="-31" font-family="Arial" font-size="10"
+          font-weight="700" fill="#F7F2E7">PAYROLL</text>
+    <text x="-37" y="-61" font-family="Arial" font-size="10"
+          font-weight="700" fill="#17324D">ACCOUNTS</text>
+  </g>
+
+  <!-- Small premium accents -->
+  <g opacity=".7">
+    <circle cx="188" cy="89" r="4" fill="#789483"/>
+    <circle cx="215" cy="101" r="3" fill="#C7A45A"/>
+    <circle cx="395" cy="79" r="4" fill="#C7A45A"/>
+    <circle cx="535" cy="250" r="5" fill="#789483"/>
+  </g>
+
+  <!-- Minimal growth arrow -->
+  <g transform="translate(507 250)" opacity=".75">
+    <path d="M-28 28 C-12 18 2 6 17 -10"
+          fill="none" stroke="#C7A45A" stroke-width="5"
+          stroke-linecap="round"/>
+    <path d="M7 -11 H18 V0"
+          fill="none" stroke="#C7A45A" stroke-width="5"
+          stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+
+</svg>

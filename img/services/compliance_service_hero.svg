@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg"
+     width="600" height="600" viewBox="0 0 600 600">
+
+  <defs>
+    <linearGradient id="navy" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#17324D"/>
+      <stop offset="1" stop-color="#244E6C"/>
+    </linearGradient>
+    <linearGradient id="blue" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#5C87A3"/>
+      <stop offset="1" stop-color="#315F7D"/>
+    </linearGradient>
+    <linearGradient id="gold" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#E0C27A"/>
+      <stop offset="1" stop-color="#B9924A"/>
+    </linearGradient>
+    <linearGradient id="ivory" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#FFFDF7"/>
+      <stop offset="1" stop-color="#F1EBDD"/>
+    </linearGradient>
+    <filter id="shadow" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="12" stdDeviation="14"
+                    flood-color="#17324D" flood-opacity=".16"/>
+    </filter>
+    <filter id="soft" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="6" stdDeviation="7"
+                    flood-color="#17324D" flood-opacity=".13"/>
+    </filter>
+  </defs>
+
+  <!-- Transparent background -->
+
+  <!-- Elegant compliance arcs -->
+  <path d="M48 430 C78 175 245 55 495 105"
+        fill="none" stroke="#C7A45A" stroke-width="2" opacity=".24"/>
+  <path d="M72 458 C110 220 275 105 520 142"
+        fill="none" stroke="#789483" stroke-width="3" opacity=".16"/>
+  <circle cx="82" cy="125" r="7" fill="#C7A45A" opacity=".65"/>
+  <circle cx="510" cy="116" r="5" fill="#789483" opacity=".6"/>
+
+  <!-- Regulatory document -->
+  <g transform="translate(108 335) rotate(-7)" filter="url(#shadow)">
+    <rect x="-68" y="-108" width="145" height="190" rx="14"
+          fill="url(#ivory)" stroke="#D9CCB1" stroke-width="2"/>
+
+    <rect x="-46" y="-82" width="82" height="10" rx="4" fill="#17324D"/>
+    <rect x="-46" y="-59" width="91" height="5" rx="2.5" fill="#C9C0AF"/>
+    <rect x="-46" y="-45" width="70" height="5" rx="2.5" fill="#D8D0C2"/>
+
+    <!-- tax/GST rows -->
+    <rect x="-46" y="-16" width="92" height="23" rx="5" fill="#F0ECE2"/>
+    <circle cx="-33" cy="-4" r="7" fill="#5C87A3"/>
+    <path d="M-36 -4 L-33 -1 L-29 -7" fill="none"
+          stroke="#FFFDF7" stroke-width="2.5"
+          stroke-linecap="round"/>
+    <text x="-20" y="0" font-family="Arial" font-size="8"
+          font-weight="700" fill="#315F7D">INCOME TAX</text>
+
+    <rect x="-46" y="16" width="92" height="23" rx="5" fill="#F0ECE2"/>
+    <circle cx="-33" cy="28" r="7" fill="#789483"/>
+    <path d="M-36 28 L-33 31 L-29 25" fill="none"
+          stroke="#FFFDF7" stroke-width="2.5"
+          stroke-linecap="round"/>
+    <text x="-20" y="32" font-family="Arial" font-size="8"
+          font-weight="700" fill="#315F7D">GST COMPLIANCE</text>
+
+    <rect x="-46" y="48" width="92" height="23" rx="5" fill="#F0ECE2"/>
+    <circle cx="-33" cy="60" r="7" fill="#C7A45A"/>
+    <text x="-33" y="63" text-anchor="middle"
+          font-family="Arial" font-size="9"
+          font-weight="700" fill="#17324D">%</text>
+    <text x="-20" y="64" font-family="Arial" font-size="8"
+          font-weight="700" fill="#315F7D">TDS / PT</text>
+
+    <!-- certificate seal -->
+    <circle cx="42" cy="-76" r="15" fill="#C7A45A"/>
+    <circle cx="42" cy="-76" r="9" fill="none"
+            stroke="#FFFDF7" stroke-width="2"/>
+    <path d="M37 -76 L41 -72 L48 -81"
+          fill="none" stroke="#FFFDF7" stroke-width="3"
+          stroke-linecap="round"/>
+  </g>
+
+  <!-- Main compliance dashboard -->
+  <g transform="translate(320 280)" filter="url(#shadow)">
+    <rect x="-157" y="-148" width="314" height="228"
+          rx="20" fill="url(#navy)"/>
+    <rect x="-142" y="-133" width="284" height="198"
+          rx="12" fill="#FBF9F3"/>
+
+    <!-- Header -->
+    <rect x="-142" y="-133" width="284" height="43"
+          rx="12" fill="#17324D"/>
+    <circle cx="-119" cy="-111" r="5" fill="#C7A45A"/>
+    <circle cx="-101" cy="-111" r="5" fill="#789483"/>
+    <text x="-79" y="-105"
+          font-family="Arial, sans-serif" font-size="11"
+          font-weight="700" letter-spacing="1"
+          fill="#F7F2E7">COMPLIANCE OVERVIEW</text>
+
+    <!-- Status cards -->
+    <rect x="-123" y="-72" width="80" height="48" rx="8" fill="#F0ECE2"/>
+    <rect x="-33" y="-72" width="80" height="48" rx="8" fill="#F0ECE2"/>
+    <rect x="57" y="-72" width="80" height="48" rx="8" fill="#F0ECE2"/>
+
+    <text x="-111" y="-52" font-family="Arial" font-size="7"
+          fill="#66727C">FILINGS</text>
+    <text x="-111" y="-37" font-family="Arial" font-size="12"
+          font-weight="700" fill="#17324D">12 / 12</text>
+
+    <text x="-21" y="-52" font-family="Arial" font-size="7"
+          fill="#66727C">STATUS</text>
+    <text x="-21" y="-37" font-family="Arial" font-size="11"
+          font-weight="700" fill="#789483">COMPLIANT</text>
+
+    <text x="69" y="-52" font-family="Arial" font-size="7"
+          fill="#66727C">RISK</text>
+    <text x="69" y="-37" font-family="Arial" font-size="12"
+          font-weight="700" fill="#315F7D">LOW</text>
+
+    <!-- Checklist panel -->
+    <rect x="-123" y="-8" width="170" height="59" rx="9"
+          fill="#FFFDF7" stroke="#DED6C7" stroke-width="1.5"/>
+
+    <circle cx="-106" cy="8" r="8" fill="#789483"/>
+    <path d="M-110 8 L-106 12 L-100 4"
+          fill="none" stroke="#FFFDF7" stroke-width="3"
+          stroke-linecap="round"/>
+    <rect x="-91" y="4" width="120" height="5" rx="2.5"
+          fill="#C9C0AF"/>
+
+    <circle cx="-106" cy="27" r="8" fill="#789483"/>
+    <path d="M-110 27 L-106 31 L-100 23"
+          fill="none" stroke="#FFFDF7" stroke-width="3"
+          stroke-linecap="round"/>
+    <rect x="-91" y="23" width="98" height="5" rx="2.5"
+          fill="#D8D0C2"/>
+
+    <circle cx="-106" cy="46" r="8" fill="#C7A45A"/>
+    <path d="M-110 46 L-106 50 L-100 42"
+          fill="none" stroke="#FFFDF7" stroke-width="3"
+          stroke-linecap="round"/>
+    <rect x="-91" y="42" width="110" height="5" rx="2.5"
+          fill="#D8D0C2"/>
+
+    <!-- Donut/status chart -->
+    <rect x="61" y="-8" width="76" height="59" rx="9"
+          fill="#FFFDF7" stroke="#DED6C7" stroke-width="1.5"/>
+
+    <circle cx="99" cy="20" r="21"
+            fill="none" stroke="#E7E0D3" stroke-width="8"/>
+    <path d="M99 -1 A21 21 0 1 1 81 31"
+          fill="none" stroke="#789483" stroke-width="8"
+          stroke-linecap="round"/>
+    <circle cx="99" cy="20" r="5" fill="#C7A45A"/>
+
+    <!-- Stand -->
+    <rect x="-25" y="80" width="50" height="15" rx="5"
+          fill="#244E6C"/>
+    <path d="M-62 96 H62 Q69 96 69 103 H-69 Q-69 96 -62 96Z"
+          fill="#17324D"/>
+  </g>
+
+  <!-- Central shield -->
+  <g transform="translate(465 116)" filter="url(#soft)">
+    <circle r="54" fill="#FFFDF7" stroke="#D8CCB7" stroke-width="2"/>
+    <path d="M0 -37 L37 -23 V7
+             C37 34 19 50 0 59
+             C-19 50 -37 34 -37 7 V-23Z"
+          fill="url(#blue)"/>
+    <path d="M-17 5 L-5 17 L20 -14"
+          fill="none" stroke="#FFFDF7" stroke-width="7"
+          stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="39" cy="-36" r="11" fill="#C7A45A"/>
+  </g>
+
+  <!-- GST receipt -->
+  <g transform="translate(485 405) rotate(7)" filter="url(#soft)">
+    <path d="M-60 -82 H60 V82
+             L45 72 L30 82 L15 72 L0 82
+             L-15 72 L-30 82 L-45 72 L-60 82Z"
+          fill="url(#ivory)" stroke="#D9CCB1" stroke-width="2"/>
+
+    <rect x="-37" y="-55" width="74" height="9" rx="4"
+          fill="#17324D"/>
+    <rect x="-37" y="-35" width="52" height="5" rx="2.5"
+          fill="#C9C0AF"/>
+    <rect x="-37" y="-20" width="70" height="5" rx="2.5"
+          fill="#D8D0C2"/>
+
+    <text x="0" y="9" text-anchor="middle"
+          font-family="Arial" font-size="25"
+          font-weight="700" fill="#315F7D">GST</text>
+
+    <line x1="-37" y1="26" x2="37" y2="26"
+          stroke="#DED6C7" stroke-width="2"/>
+    <rect x="-37" y="39" width="29" height="7" rx="3" fill="#5C87A3"/>
+    <rect x="2" y="39" width="35" height="7" rx="3" fill="#C7A45A"/>
+  </g>
+
+  <!-- TDS percentage badge -->
+  <g transform="translate(137 142)" filter="url(#soft)">
+    <circle r="42" fill="#FFFDF7" stroke="#D8CCB7" stroke-width="2"/>
+    <circle r="30" fill="#F0ECE2"/>
+    <text x="0" y="11" text-anchor="middle"
+          font-family="Arial" font-size="28"
+          font-weight="700" fill="#315F7D">%</text>
+    <circle cx="28" cy="-27" r="10" fill="#C7A45A"/>
+    <path d="M24 -27 L28 -23 L34 -31"
+          fill="none" stroke="#FFFDF7" stroke-width="2.5"
+          stroke-linecap="round"/>
+  </g>
+
+  <!-- PT ID card -->
+  <g transform="translate(95 515) rotate(-4)" filter="url(#soft)">
+    <rect x="-62" y="-42" width="124" height="84" rx="10"
+          fill="#FFFDF7" stroke="#D8CCB7" stroke-width="2"/>
+    <rect x="-45" y="-25" width="30" height="30" rx="6"
+          fill="#5C87A3"/>
+    <circle cx="-30" cy="-15" r="6" fill="#F7F2E7"/>
+    <path d="M-40 1 Q-30 -8 -20 1"
+          fill="none" stroke="#F7F2E7" stroke-width="4"
+          stroke-linecap="round"/>
+    <rect x="-5" y="-22" width="48" height="6" rx="3" fill="#17324D"/>
+    <rect x="-5" y="-8" width="38" height="5" rx="2.5" fill="#D0C7B7"/>
+    <rect x="-5" y="5" width="48" height="5" rx="2.5" fill="#D0C7B7"/>
+    <rect x="-5" y="21" width="31" height="7" rx="3" fill="#C7A45A"/>
+  </g>
+
+  <!-- Small regulatory accents -->
+  <g opacity=".7">
+    <circle cx="230" cy="74" r="4" fill="#789483"/>
+    <circle cx="257" cy="89" r="3" fill="#C7A45A"/>
+    <circle cx="385" cy="72" r="4" fill="#C7A45A"/>
+    <circle cx="545" cy="277" r="5" fill="#789483"/>
+  </g>
+
+  <!-- Minimal secure connection line -->
+  <g transform="translate(526 320)" opacity=".7">
+    <path d="M-35 18 C-17 7 -5 -4 13 -21"
+          fill="none" stroke="#C7A45A" stroke-width="4"
+          stroke-linecap="round"/>
+    <path d="M4 -22 H15 V-11"
+          fill="none" stroke="#C7A45A" stroke-width="4"
+          stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+
+</svg>
