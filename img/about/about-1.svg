@@ -1,0 +1,101 @@
+<svg viewBox="0 0 600 400" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="aboutBlob" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#EAF3FF"/>
+      <stop offset="100%" stop-color="#CFE4FB"/>
+    </linearGradient>
+    <linearGradient id="monitorGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#4FA3F7"/>
+      <stop offset="100%" stop-color="#015FC9"/>
+    </linearGradient>
+  </defs>
+
+  <!-- backdrop -->
+  <rect width="600" height="400" fill="url(#aboutBlob)" rx="18"/>
+  <circle cx="545" cy="55" r="30" fill="#FFB648" opacity="0.85"/>
+  <circle cx="45" cy="70" r="16" fill="#015FC9" opacity="0.2"/>
+  <circle cx="35" cy="330" r="20" fill="#015FC9" opacity="0.15"/>
+  <circle cx="560" cy="330" r="14" fill="#FF6B6B" opacity="0.35"/>
+
+  <!-- floor shadow -->
+  <ellipse cx="300" cy="368" rx="230" ry="16" fill="#0A1F44" opacity="0.08"/>
+
+  <!-- back wall chart frame -->
+  <g transform="translate(455,115)">
+    <rect x="-58" y="-55" width="116" height="86" rx="8" fill="#FFFFFF" stroke="#CFE4FB" stroke-width="2"/>
+    <rect x="-42" y="4" width="10" height="16" fill="#CFE4FB"/>
+    <rect x="-26" y="-8" width="10" height="28" fill="#4FA3F7"/>
+    <rect x="-10" y="-20" width="10" height="40" fill="#015FC9"/>
+    <rect x="6" y="-2" width="10" height="22" fill="#4FA3F7"/>
+    <rect x="22" y="-14" width="10" height="34" fill="#FFB648"/>
+  </g>
+
+  <!-- long table -->
+  <rect x="90" y="288" width="420" height="16" rx="6" fill="#0E2A5C"/>
+  <rect x="115" y="304" width="14" height="60" fill="#0A1F44"/>
+  <rect x="470" y="304" width="14" height="60" fill="#0A1F44"/>
+
+  <!-- laptop on table (center-left) -->
+  <g transform="translate(215,255)">
+    <rect x="-46" y="-34" width="92" height="58" rx="6" fill="#0A1F44"/>
+    <rect x="-38" y="-27" width="76" height="42" rx="3" fill="#E8F1FC"/>
+    <rect x="-58" y="24" width="116" height="9" rx="4" fill="#0E2A5C"/>
+    <rect x="-24" y="-6" width="8" height="16" fill="url(#monitorGrad)"/>
+    <rect x="-10" y="-14" width="8" height="24" fill="#FFB648"/>
+    <rect x="4" y="-2" width="8" height="12" fill="url(#monitorGrad)"/>
+  </g>
+
+  <!-- documents stack (center-right) -->
+  <g transform="translate(340,262)">
+    <rect x="-32" y="-8" width="64" height="46" rx="5" fill="#FFFFFF" stroke="#CFE4FB" stroke-width="2"/>
+    <rect x="-22" y="2" width="44" height="6" rx="3" fill="#015FC9"/>
+    <rect x="-22" y="14" width="34" height="5" rx="2.5" fill="#CFE4FB"/>
+    <rect x="-22" y="24" width="34" height="5" rx="2.5" fill="#CFE4FB"/>
+    <circle cx="16" cy="34" r="9" fill="#FFB648"/>
+    <path d="M12 34 L15 37 L21 30" stroke="#FFFFFF" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+
+  <!-- small potted plant (growth motif) -->
+  <g transform="translate(440,270)">
+    <path d="M0 0 C-14 -10 -14 -30 0 -38 C14 -30 14 -10 0 0 Z" fill="#3FAE6B"/>
+    <path d="M0 -4 C-8 -14 -8 -30 0 -36 C8 -30 8 -14 0 -4 Z" fill="#59C583"/>
+    <path d="M-14 0 L14 0 L10 24 L-10 24 Z" fill="#0E2A5C"/>
+  </g>
+
+  <!-- Person 1: seated, presenting on laptop -->
+  <g>
+    <ellipse cx="200" cy="188" rx="24" ry="25" fill="#E7B48C"/>
+    <path d="M178 180 Q200 156 222 180 L222 171 Q200 151 178 171 Z" fill="#2B1B12"/>
+    <path d="M166 244 Q168 206 200 198 Q232 206 234 244 L234 254 L166 254 Z" fill="#015FC9"/>
+    <path d="M185 202 L215 202 L210 224 L190 224 Z" fill="#FFFFFF"/>
+    <rect x="150" y="212" width="18" height="42" rx="8" fill="#0E2A5C" transform="rotate(-14 159 212)"/>
+    <rect x="222" y="206" width="18" height="42" rx="8" fill="#0E2A5C" transform="rotate(18 231 206)"/>
+  </g>
+
+  <!-- Person 2: standing, gesturing toward chart -->
+  <g>
+    <ellipse cx="330" cy="168" rx="24" ry="25" fill="#C88A5E"/>
+    <path d="M308 160 Q330 134 352 160 L352 150 Q330 128 308 150 Z" fill="#241209"/>
+    <path d="M296 254 Q298 200 330 192 Q362 200 364 254 Z" fill="#4FA3F7"/>
+    <path d="M315 196 L345 196 L340 220 L320 220 Z" fill="#FFFFFF"/>
+    <rect x="286" y="200" width="17" height="46" rx="8" fill="#0E2A5C" transform="rotate(-12 294 200)"/>
+    <rect x="358" y="200" width="17" height="46" rx="8" fill="#0E2A5C" transform="rotate(12 366 200)"/>
+  </g>
+
+  <!-- Person 3: seated right, reviewing documents -->
+  <g transform="translate(20,0)">
+    <ellipse cx="418" cy="196" rx="22" ry="23" fill="#E7B48C"/>
+    <path d="M398 188 Q418 166 438 188 L438 179 Q418 161 398 179 Z" fill="#3A2418"/>
+    <path d="M386 254 Q388 218 418 210 Q448 218 450 254 Z" fill="#FFB648"/>
+    <path d="M404 214 L432 214 L427 236 L409 236 Z" fill="#0A1F44"/>
+    <rect x="374" y="226" width="16" height="36" rx="7" fill="#0E2A5C" transform="rotate(-10 382 226)"/>
+    <rect x="440" y="226" width="16" height="36" rx="7" fill="#0E2A5C" transform="rotate(10 448 226)"/>
+  </g>
+
+  <!-- floating checkmark badge (trust motif) -->
+  <g transform="translate(120,130)">
+    <circle r="22" fill="#FFFFFF" stroke="#CFE4FB" stroke-width="2"/>
+    <circle r="15" fill="#3FAE6B"/>
+    <path d="M-7 0 L-2 6 L8 -8" stroke="#FFFFFF" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+</svg>

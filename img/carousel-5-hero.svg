@@ -1,0 +1,63 @@
+<svg viewBox="0 0 600 520" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="blobGrad5" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#EAF3FF"/>
+      <stop offset="100%" stop-color="#CFE4FB"/>
+    </linearGradient>
+    <linearGradient id="rocketGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#4FA3F7"/>
+      <stop offset="100%" stop-color="#015FC9"/>
+    </linearGradient>
+  </defs>
+
+  <ellipse cx="300" cy="270" rx="255" ry="235" fill="url(#blobGrad5)"/>
+  <circle cx="500" cy="380" r="26" fill="#FFB648" opacity="0.85"/>
+  <circle cx="75" cy="150" r="16" fill="#015FC9" opacity="0.22"/>
+  <circle cx="60" cy="330" r="12" fill="#015FC9" opacity="0.18"/>
+
+  <ellipse cx="300" cy="466" rx="200" ry="18" fill="#0A1F44" opacity="0.08"/>
+
+  <!-- rising bar steps -->
+  <rect x="150" y="392" width="60" height="60" rx="6" fill="#CFE4FB"/>
+  <rect x="220" y="352" width="60" height="100" rx="6" fill="#9CC6F5"/>
+  <rect x="290" y="304" width="60" height="148" rx="6" fill="#4FA3F7"/>
+  <rect x="360" y="248" width="60" height="204" rx="6" fill="#015FC9"/>
+
+  <!-- dashed trend line with arrow -->
+  <path d="M170 400 L240 360 L310 320 L390 260" stroke="#0A1F44" stroke-width="3" fill="none" stroke-dasharray="2 8" stroke-linecap="round"/>
+  <polygon points="390,246 406,258 386,266" fill="#0A1F44"/>
+
+  <!-- rocket taking off from top bar -->
+  <g transform="translate(390,190) rotate(-15)">
+    <path d="M0 -46 C16 -30 16 6 0 26 C-16 6 -16 -30 0 -46 Z" fill="url(#rocketGrad)"/>
+    <circle cx="0" cy="-14" r="8" fill="#FFFFFF"/>
+    <path d="M-10 14 L-22 34 L-4 24 Z" fill="#FFB648"/>
+    <path d="M10 14 L22 34 L4 24 Z" fill="#FFB648"/>
+    <path d="M-6 26 L0 46 L6 26 Z" fill="#FF6B6B"/>
+  </g>
+
+  <!-- floating target -->
+  <g transform="translate(130,220)">
+    <circle r="26" fill="#FFFFFF" stroke="#FF6B6B" stroke-width="4"/>
+    <circle r="16" fill="none" stroke="#FF6B6B" stroke-width="4"/>
+    <circle r="6" fill="#FF6B6B"/>
+    <line x1="26" y1="-26" x2="46" y2="-46" stroke="#0A1F44" stroke-width="3" stroke-linecap="round"/>
+    <polygon points="46,-46 34,-44 44,-34" fill="#0A1F44"/>
+  </g>
+
+  <!-- lightbulb idea -->
+  <g transform="translate(505,120)">
+    <circle r="20" fill="#FFE9B8"/>
+    <path d="M-8 -6 Q0 -20 8 -6 Q10 4 4 10 L4 16 L-4 16 L-4 10 Q-10 4 -8 -6 Z" fill="#FFB648"/>
+    <rect x="-4" y="16" width="8" height="6" rx="2" fill="#0A1F44"/>
+  </g>
+
+  <!-- person standing confidently -->
+  <g>
+    <ellipse cx="470" cy="418" rx="24" ry="25" fill="#E7B48C"/>
+    <path d="M448 410 Q470 386 492 410 L492 401 Q470 381 448 401 Z" fill="#2B1B12"/>
+    <path d="M436 468 Q438 428 470 420 Q503 428 505 468 Z" fill="#0A1F44"/>
+    <path d="M455 424 L487 424 L482 448 L460 448 Z" fill="#FFB648"/>
+    <rect x="418" y="400" width="18" height="44" rx="8" fill="#0E2A5C" transform="rotate(-35 427 400)"/>
+  </g>
+</svg>

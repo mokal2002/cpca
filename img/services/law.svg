@@ -1,0 +1,53 @@
+<svg viewBox="0 0 400 260" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bgC" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#EAF3FF"/>
+      <stop offset="100%" stop-color="#CFE4FB"/>
+    </linearGradient>
+    <linearGradient id="colC" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="100%" stop-color="#DCEBFB"/>
+    </linearGradient>
+    <linearGradient id="scaleC" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#4FA3F7"/>
+      <stop offset="100%" stop-color="#015FC9"/>
+    </linearGradient>
+  </defs>
+  <rect width="400" height="260" fill="url(#bgC)"/>
+  <circle cx="355" cy="45" r="16" fill="#FFB648" opacity="0.85"/>
+  <circle cx="35" cy="70" r="12" fill="#015FC9" opacity="0.2"/>
+
+  <ellipse cx="200" cy="228" rx="150" ry="12" fill="#0A1F44" opacity="0.08"/>
+
+  <!-- courthouse -->
+  <g>
+    <rect x="80" y="196" width="240" height="12" rx="4" fill="#0A1F44"/>
+    <polygon points="200,148 300,196 100,196" fill="#0E2A5C"/>
+    <rect x="112" y="168" width="12" height="28" fill="url(#colC)"/>
+    <rect x="140" y="168" width="12" height="28" fill="url(#colC)"/>
+    <rect x="168" y="168" width="12" height="28" fill="url(#colC)"/>
+    <rect x="196" y="168" width="12" height="28" fill="url(#colC)"/>
+    <rect x="224" y="168" width="12" height="28" fill="url(#colC)"/>
+    <rect x="252" y="168" width="12" height="28" fill="url(#colC)"/>
+    <rect x="278" y="168" width="12" height="28" fill="url(#colC)"/>
+    <rect x="104" y="162" width="192" height="8" rx="3" fill="#015FC9"/>
+  </g>
+
+  <!-- scales of justice floating above -->
+  <g transform="translate(200,90)">
+    <rect x="-3" y="-30" width="6" height="60" rx="3" fill="#0A1F44"/>
+    <rect x="-34" y="-36" width="68" height="6" rx="3" fill="#0A1F44"/>
+    <line x1="-30" y1="-33" x2="-30" y2="-6" stroke="#0A1F44" stroke-width="1.6"/>
+    <line x1="30" y1="-33" x2="30" y2="-6" stroke="#0A1F44" stroke-width="1.6"/>
+    <path d="M-44 -6 Q-30 14 -16 -6 Z" fill="url(#scaleC)"/>
+    <path d="M16 -6 Q30 14 44 -6 Z" fill="#FFB648"/>
+    <circle cx="0" cy="-36" r="6" fill="#015FC9"/>
+    <ellipse cx="0" cy="32" rx="18" ry="5" fill="#0A1F44"/>
+  </g>
+
+  <!-- gavel -->
+  <g transform="translate(95,130) rotate(-25)">
+    <rect x="-7" y="-32" width="14" height="24" rx="4" fill="#0A1F44"/>
+    <rect x="-4" y="-10" width="8" height="42" rx="3" fill="#8A5A2B"/>
+  </g>
+</svg>

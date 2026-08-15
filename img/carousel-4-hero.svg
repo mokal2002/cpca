@@ -1,0 +1,54 @@
+<svg viewBox="0 0 600 520" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="blobGrad4" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#EAF3FF"/>
+      <stop offset="100%" stop-color="#CFE4FB"/>
+    </linearGradient>
+  </defs>
+
+  <ellipse cx="300" cy="270" rx="255" ry="235" fill="url(#blobGrad4)"/>
+  <circle cx="500" cy="120" r="26" fill="#FFB648" opacity="0.85"/>
+  <circle cx="80" cy="380" r="18" fill="#015FC9" opacity="0.2"/>
+  <circle cx="70" cy="140" r="14" fill="#015FC9" opacity="0.18"/>
+
+  <ellipse cx="300" cy="466" rx="200" ry="18" fill="#0A1F44" opacity="0.08"/>
+
+  <!-- connection ring -->
+  <circle cx="300" cy="260" r="150" fill="none" stroke="#CFE4FB" stroke-width="3" stroke-dasharray="8 10"/>
+
+  <!-- small houses / community icons around ring -->
+  <g transform="translate(300,110)">
+    <polygon points="0,-14 16,0 -16,0" fill="#015FC9"/>
+    <rect x="-12" y="0" width="24" height="18" fill="#0E2A5C"/>
+  </g>
+  <g transform="translate(455,255)">
+    <circle r="16" fill="#FFB648"/>
+    <path d="M-6 0 Q0 -10 6 0 Q0 6 -6 0 Z" fill="#FFFFFF"/>
+  </g>
+  <g transform="translate(145,255)">
+    <circle r="16" fill="#4FA3F7"/>
+    <path d="M-7 -2 L-2 5 L7 -6" stroke="#FFFFFF" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+
+  <!-- central heart -->
+  <g transform="translate(300,255)">
+    <path d="M0 34 C-40 6 -46 -30 -18 -34 C-4 -36 0 -20 0 -20 C0 -20 4 -36 18 -34 C46 -30 40 6 0 34 Z" fill="#FF6B6B"/>
+    <path d="M-16 -18 C-8 -22 -2 -16 0 -10" stroke="#FFFFFF" stroke-width="3" fill="none" stroke-linecap="round" opacity="0.5"/>
+  </g>
+
+  <!-- two people, hands joined near heart -->
+  <g>
+    <ellipse cx="222" cy="368" rx="24" ry="25" fill="#E7B48C"/>
+    <path d="M200 360 Q222 336 244 360 L244 351 Q222 331 200 351 Z" fill="#2B1B12"/>
+    <path d="M186 428 Q188 388 222 380 Q256 388 258 428 Z" fill="#4FA3F7"/>
+    <path d="M240 400 Q270 396 288 372" stroke="#E7B48C" stroke-width="14" fill="none" stroke-linecap="round"/>
+  </g>
+  <g>
+    <ellipse cx="378" cy="368" rx="24" ry="25" fill="#C88A5E"/>
+    <path d="M356 360 Q378 336 400 360 L400 351 Q378 331 356 351 Z" fill="#241209"/>
+    <path d="M342 428 Q344 388 378 380 Q412 388 414 428 Z" fill="#FFB648"/>
+    <path d="M360 400 Q330 396 312 372" stroke="#C88A5E" stroke-width="14" fill="none" stroke-linecap="round"/>
+  </g>
+  <circle cx="300" cy="378" r="10" fill="#FF6B6B"/>
+  <path d="M295 378 C293 374 297 371 300 375 C303 371 307 374 305 378 C303 381 300 384 300 384 C300 384 297 381 295 378 Z" fill="#FFFFFF"/>
+</svg>

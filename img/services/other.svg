@@ -1,0 +1,59 @@
+<svg viewBox="0 0 400 260" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bgF" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#EAF3FF"/>
+      <stop offset="100%" stop-color="#CFE4FB"/>
+    </linearGradient>
+    <linearGradient id="gearF" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#4FA3F7"/>
+      <stop offset="100%" stop-color="#015FC9"/>
+    </linearGradient>
+  </defs>
+  <rect width="400" height="260" fill="url(#bgF)"/>
+  <circle cx="40" cy="55" r="16" fill="#FFB648" opacity="0.85"/>
+  <circle cx="365" cy="70" r="12" fill="#015FC9" opacity="0.2"/>
+
+  <ellipse cx="200" cy="228" rx="150" ry="12" fill="#0A1F44" opacity="0.08"/>
+
+  <!-- central gear -->
+  <g transform="translate(200,124)">
+    <g fill="url(#gearF)">
+      <rect x="-8" y="-58" width="16" height="20" rx="3"/>
+      <rect x="-8" y="38" width="16" height="20" rx="3"/>
+      <rect x="-58" y="-8" width="20" height="16" rx="3"/>
+      <rect x="38" y="-8" width="20" height="16" rx="3"/>
+      <rect x="-42" y="-42" width="16" height="20" rx="3" transform="rotate(-45 -34 -32)"/>
+      <rect x="26" y="-42" width="16" height="20" rx="3" transform="rotate(45 34 -32)"/>
+      <rect x="-42" y="22" width="16" height="20" rx="3" transform="rotate(45 -34 32)"/>
+      <rect x="26" y="22" width="16" height="20" rx="3" transform="rotate(-45 34 32)"/>
+    </g>
+    <circle r="42" fill="url(#gearF)"/>
+    <circle r="18" fill="#FFFFFF"/>
+  </g>
+
+  <!-- orbiting service icons -->
+  <g transform="translate(105,90)">
+    <circle r="24" fill="#FFFFFF" stroke="#CFE4FB" stroke-width="2"/>
+    <rect x="-11" y="-8" width="22" height="16" rx="3" fill="#FFB648"/>
+    <circle cx="-4" cy="-13" r="4" fill="#FFB648"/>
+  </g>
+
+  <g transform="translate(300,88)">
+    <circle r="24" fill="#FFFFFF" stroke="#CFE4FB" stroke-width="2"/>
+    <path d="M-10 8 Q0 -10 10 8" stroke="#015FC9" stroke-width="3" fill="none" stroke-linecap="round"/>
+    <line x1="-10" y1="8" x2="10" y2="8" stroke="#015FC9" stroke-width="3" stroke-linecap="round"/>
+  </g>
+
+  <g transform="translate(90,182)">
+    <circle r="22" fill="#FFFFFF" stroke="#CFE4FB" stroke-width="2"/>
+    <rect x="-10" y="-7" width="20" height="14" rx="2" fill="#4FA3F7"/>
+    <line x1="-6" y1="0" x2="1" y2="0" stroke="#FFFFFF" stroke-width="1.6"/>
+    <line x1="-6" y1="4" x2="4" y2="4" stroke="#FFFFFF" stroke-width="1.6"/>
+  </g>
+
+  <g transform="translate(308,186)">
+    <circle r="22" fill="#FFFFFF" stroke="#CFE4FB" stroke-width="2"/>
+    <circle cx="0" cy="-4" r="6" fill="#FF6B6B"/>
+    <path d="M-9 10 Q0 -2 9 10 Z" fill="#FF6B6B"/>
+  </g>
+</svg>
