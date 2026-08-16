@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="900" viewBox="0 0 900 900">
+  <title>NGO Society and Trust Services</title>
+  <desc>Transparent premium vector illustration representing nonprofit registration, trust governance, community support, compliance and social impact.</desc>
+
+  <defs>
+    <linearGradient id="navy" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#163F67"/>
+      <stop offset="1" stop-color="#092A4A"/>
+    </linearGradient>
+    <linearGradient id="teal" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#55B9A9"/>
+      <stop offset="1" stop-color="#278C83"/>
+    </linearGradient>
+    <linearGradient id="gold" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#F3CE7A"/>
+      <stop offset="1" stop-color="#D79A3C"/>
+    </linearGradient>
+    <linearGradient id="coral" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#E99A86"/>
+      <stop offset="1" stop-color="#C96B64"/>
+    </linearGradient>
+    <filter id="shadow" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="14" stdDeviation="16" flood-color="#123B63" flood-opacity=".13"/>
+    </filter>
+  </defs>
+
+  <!-- transparent canvas; only decorative shapes are drawn -->
+
+  <!-- subtle impact rings -->
+  <circle cx="450" cy="445" r="300" fill="none" stroke="#55B9A9" stroke-width="2" opacity=".10"/>
+  <circle cx="450" cy="445" r="350" fill="none" stroke="#F3CE7A" stroke-width="2" opacity=".08"/>
+
+  <!-- COMMUNITY NETWORK -->
+  <g fill="none" stroke="#9BCFC7" stroke-width="5" stroke-linecap="round" opacity=".72">
+    <path d="M190 300 Q280 340 330 395"/>
+    <path d="M710 300 Q620 340 570 395"/>
+    <path d="M190 600 Q280 555 330 505"/>
+    <path d="M710 600 Q620 555 570 505"/>
+  </g>
+  <g>
+    <circle cx="190" cy="300" r="11" fill="url(#gold)"/>
+    <circle cx="710" cy="300" r="11" fill="url(#gold)"/>
+    <circle cx="190" cy="600" r="11" fill="url(#teal)"/>
+    <circle cx="710" cy="600" r="11" fill="url(#teal)"/>
+  </g>
+
+  <!-- LEFT: NGO REGISTRATION DOCUMENT -->
+  <g filter="url(#shadow)">
+    <circle cx="145" cy="220" r="76" fill="#FFFFFF" stroke="#D9E8E7" stroke-width="3"/>
+    <rect x="105" y="178" width="80" height="92" rx="11" fill="#F7FBFA" stroke="#BBD8D4" stroke-width="3"/>
+    <path d="M160 178 L185 203 L160 203 Z" fill="#DDECEA"/>
+    <rect x="119" y="193" width="34" height="7" rx="3.5" fill="#C5DCDA"/>
+    <rect x="119" y="209" width="48" height="6" rx="3" fill="#D6E6E4"/>
+    <rect x="119" y="224" width="42" height="6" rx="3" fill="#D6E6E4"/>
+    <circle cx="146" cy="250" r="15" fill="url(#teal)"/>
+    <path d="M138 250 L144 256 L155 244" fill="none" stroke="#FFFFFF" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+
+  <!-- RIGHT: 12A / 80G DONATION / BENEFIT -->
+  <g filter="url(#shadow)">
+    <circle cx="755" cy="220" r="76" fill="#FFFFFF" stroke="#D9E8E7" stroke-width="3"/>
+    <path d="M755 264 C744 250 716 233 716 211 C716 195 729 186 741 191 C748 194 755 202 755 202 C755 202 762 194 769 191 C781 186 794 195 794 211 C794 233 766 250 755 264Z" fill="url(#coral)"/>
+    <path d="M726 177 Q755 158 784 177" fill="none" stroke="#F3CE7A" stroke-width="8" stroke-linecap="round"/>
+    <circle cx="755" cy="168" r="9" fill="url(#gold)"/>
+  </g>
+
+  <!-- CENTRAL ORGANISATION / TRUST BUILDING -->
+  <g filter="url(#shadow)">
+    <!-- foundation -->
+    <rect x="285" y="610" width="330" height="24" rx="8" fill="url(#navy)"/>
+
+    <!-- building body -->
+    <rect x="305" y="370" width="290" height="240" rx="18" fill="#FFFFFF" stroke="#D6E6E4" stroke-width="3"/>
+
+    <!-- roof -->
+    <path d="M270 375 L450 245 L630 375 Z" fill="url(#navy)"/>
+    <path d="M305 358 L450 275 L595 358" fill="none" stroke="#55B9A9" stroke-width="9" stroke-linecap="round"/>
+
+    <!-- name plaque -->
+    <rect x="360" y="335" width="180" height="48" rx="13" fill="#FFFFFF"/>
+    <text x="450" y="365" text-anchor="middle" font-family="Arial, sans-serif"
+          font-size="19" font-weight="700" fill="#163F67">SOCIAL IMPACT</text>
+
+    <!-- pillars -->
+    <rect x="330" y="414" width="43" height="158" rx="9" fill="#EAF4F2"/>
+    <rect x="394" y="414" width="43" height="158" rx="9" fill="#EAF4F2"/>
+    <rect x="458" y="414" width="43" height="158" rx="9" fill="#EAF4F2"/>
+    <rect x="522" y="414" width="43" height="158" rx="9" fill="#EAF4F2"/>
+
+    <!-- entrance -->
+    <path d="M425 570 V500 Q450 468 475 500 V570 Z" fill="url(#teal)"/>
+    <circle cx="465" cy="529" r="4" fill="#FFFFFF"/>
+
+    <!-- governance scales on facade -->
+    <g transform="translate(450 437)">
+      <path d="M0 -27 V19" stroke="#163F67" stroke-width="5" stroke-linecap="round"/>
+      <path d="M-45 -12 H45" stroke="#163F67" stroke-width="5" stroke-linecap="round"/>
+      <path d="M-31 -12 L-48 16 H-14 Z" fill="#F3CE7A"/>
+      <path d="M31 -12 L14 16 H48 Z" fill="#F3CE7A"/>
+      <circle cx="0" cy="-28" r="7" fill="#E99A86"/>
+      <rect x="-31" y="18" width="62" height="6" rx="3" fill="#163F67"/>
+    </g>
+  </g>
+
+  <!-- THREE PEOPLE = COMMUNITY / SOCIETY -->
+  <!-- left -->
+  <g>
+    <circle cx="295" cy="675" r="34" fill="#E5AC86"/>
+    <path d="M261 668 Q295 625 329 668 Q323 641 295 638 Q267 641 261 668Z" fill="#2B4050"/>
+    <path d="M250 760 Q254 700 295 695 Q336 700 340 760Z" fill="url(#coral)"/>
+    <path d="M270 716 Q295 735 320 716" fill="none" stroke="#FFFFFF" stroke-width="5" opacity=".8"/>
+  </g>
+
+  <!-- center -->
+  <g>
+    <circle cx="450" cy="675" r="38" fill="#C98B65"/>
+    <path d="M412 668 Q450 620 488 668 Q481 637 450 635 Q419 637 412 668Z" fill="#213746"/>
+    <path d="M401 770 Q406 699 450 694 Q494 699 499 770Z" fill="url(#teal)"/>
+    <path d="M425 715 Q450 736 475 715" fill="none" stroke="#FFFFFF" stroke-width="5" opacity=".8"/>
+  </g>
+
+  <!-- right -->
+  <g>
+    <circle cx="605" cy="675" r="34" fill="#E3B28F"/>
+    <path d="M571 668 Q605 625 639 668 Q633 641 605 638 Q577 641 571 668Z" fill="#5A3D2E"/>
+    <path d="M560 760 Q564 700 605 695 Q646 700 650 760Z" fill="url(#gold)"/>
+    <path d="M580 716 Q605 735 630 716" fill="none" stroke="#FFFFFF" stroke-width="5" opacity=".8"/>
+  </g>
+
+  <!-- HANDSHAKE = collaboration -->
+  <g filter="url(#shadow)">
+    <circle cx="450" cy="795" r="57" fill="#FFFFFF" stroke="#D9E8E7" stroke-width="3"/>
+    <path d="M420 788 L437 772 Q446 764 456 771 L472 783"
+          fill="none" stroke="url(#teal)" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M480 788 L463 772 Q454 764 444 771 L428 783"
+          fill="none" stroke="url(#gold)" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M438 792 L450 802 L462 792" fill="none" stroke="#163F67" stroke-width="7" stroke-linecap="round"/>
+  </g>
+
+  <!-- globe = FCRA / wider regulatory reach -->
+  <g filter="url(#shadow)">
+    <circle cx="130" cy="515" r="58" fill="#FFFFFF" stroke="#D9E8E7" stroke-width="3"/>
+    <circle cx="130" cy="515" r="34" fill="none" stroke="url(#teal)" stroke-width="5"/>
+    <path d="M96 515 H164 M130 481 C113 493 113 537 130 549 M130 481 C147 493 147 537 130 549"
+          fill="none" stroke="#163F67" stroke-width="4" stroke-linecap="round"/>
+    <path d="M104 498 Q130 508 156 498 M104 532 Q130 522 156 532"
+          fill="none" stroke="#163F67" stroke-width="3" opacity=".7"/>
+  </g>
+
+  <!-- CSR / community growth icon -->
+  <g filter="url(#shadow)">
+    <circle cx="770" cy="515" r="58" fill="#FFFFFF" stroke="#D9E8E7" stroke-width="3"/>
+    <path d="M770 545 C755 525 742 509 742 495 C742 483 751 475 762 478 C767 480 770 485 770 485 C770 485 773 480 778 478 C789 475 798 483 798 495 C798 509 785 525 770 545Z" fill="url(#coral)"/>
+    <path d="M770 463 V446" stroke="#55B9A9" stroke-width="6" stroke-linecap="round"/>
+    <path d="M761 452 L770 443 L779 452" fill="none" stroke="#55B9A9" stroke-width="5" stroke-linecap="round"/>
+  </g>
+
+  <!-- small approval marks -->
+  <g fill="url(#gold)">
+    <path d="M224 170 l6 17 17 6-17 6-6 17-6-17-17-6 17-6z"/>
+    <path d="M676 170 l6 17 17 6-17 6-6 17-6-17-17-6 17-6z"/>
+  </g>
+</svg>
