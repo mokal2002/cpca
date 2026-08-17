@@ -128,5 +128,5 @@
   </g>
 
   <!-- Bottom accent -->
-  <path d="M0 194 H900" stroke="#FFB648" stroke-width="6" opacity=".9"/>
+  <!-- <path d="M0 194 H900" stroke="#FFB648" stroke-width="6" opacity=".9"/> -->
 </svg>
