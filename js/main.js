@@ -138,8 +138,8 @@
         loop: true,
         nav: true,
         navText: [
-            '<i class="bi bi-arrow-left"></i>',
-            '<i class="bi bi-arrow-right"></i>'
+            '<i class="fa fa-arrow-left"></i>',
+            '<i class="fa fa-arrow-right"></i>'
         ],
     });
 
@@ -264,26 +264,26 @@ $(".clients-carousel").owlCarousel({
             method: 'POST',
             body: formData
         })
-        .then(response => response.json())
-        .then(data => {
-            if (data.success) {
-                statusEl.textContent = "Thank you! Your application has been submitted successfully. We'll be in touch shortly.";
-                statusEl.className = "text-success mt-3";
-                form.reset();
-                form.classList.remove('was-validated');
-            } else {
-                statusEl.textContent = "Something went wrong. Please try again or email us directly.";
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    statusEl.textContent = "Thank you! Your application has been submitted successfully. We'll be in touch shortly.";
+                    statusEl.className = "text-success mt-3";
+                    form.reset();
+                    form.classList.remove('was-validated');
+                } else {
+                    statusEl.textContent = "Something went wrong. Please try again or email us directly.";
+                    statusEl.className = "text-danger mt-3";
+                }
+            })
+            .catch(() => {
+                statusEl.textContent = "Network error. Please check your connection and try again.";
                 statusEl.className = "text-danger mt-3";
-            }
-        })
-        .catch(() => {
-            statusEl.textContent = "Network error. Please check your connection and try again.";
-            statusEl.className = "text-danger mt-3";
-        })
-        .finally(() => {
-            submitBtn.disabled = false;
-            submitBtn.innerHTML = originalBtnText;
-        });
+            })
+            .finally(() => {
+                submitBtn.disabled = false;
+                submitBtn.innerHTML = originalBtnText;
+            });
     }, false);
 
 })();
@@ -320,26 +320,26 @@ $(".clients-carousel").owlCarousel({
             method: 'POST',
             body: formData
         })
-        .then(response => response.json())
-        .then(data => {
-            if (data.success) {
-                statusEl.textContent = "Thank you! Your message has been sent successfully.";
-                statusEl.className = "text-success mt-2";
-                form.reset();
-                form.classList.remove('was-validated');
-            } else {
-                statusEl.textContent = "Something went wrong. Please try again or email us directly.";
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    statusEl.textContent = "Thank you! Your message has been sent successfully.";
+                    statusEl.className = "text-success mt-2";
+                    form.reset();
+                    form.classList.remove('was-validated');
+                } else {
+                    statusEl.textContent = "Something went wrong. Please try again or email us directly.";
+                    statusEl.className = "text-danger mt-2";
+                }
+            })
+            .catch(() => {
+                statusEl.textContent = "Network error. Please check your connection and try again.";
                 statusEl.className = "text-danger mt-2";
-            }
-        })
-        .catch(() => {
-            statusEl.textContent = "Network error. Please check your connection and try again.";
-            statusEl.className = "text-danger mt-2";
-        })
-        .finally(() => {
-            submitBtn.disabled = false;
-            submitBtn.innerHTML = originalBtnText;
-        });
+            })
+            .finally(() => {
+                submitBtn.disabled = false;
+                submitBtn.innerHTML = originalBtnText;
+            });
     }, false);
 
 })();
