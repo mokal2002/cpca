@@ -138,7 +138,7 @@
 }
 
 .nav-bar .navbar-light .navbar-brand img {
-    max-height: 50px;
+    max-height: 80px;
 }
 
 .navbar .navbar-nav .nav-item .nav-link {
@@ -161,6 +161,10 @@
 @media (max-width: 991px) {
     .navbar {
         padding: 20px 0;
+    }
+
+    .nav-bar .navbar-light .navbar-brand img {
+        max-height: 60px;
     }
 
     .navbar .navbar-nav .nav-link {
@@ -219,6 +223,10 @@
         display: flex;
         align-items: center;
         justify-content: end;
+    }
+    /* //added by me */
+    .nav-bar .navbar-light .navbar-brand img {
+        max-height: 60px;
     }
 
     .navbar .navbar-nav {
@@ -947,6 +955,7 @@
         margin-bottom: 10px;
     }
 }
+
 /*** Footer End ***/
 
 /*** copyright Start ***/
@@ -977,9 +986,9 @@
 }
 
 .clients .client-item img {
-    max-height: 60px;
+    max-height: 80px;
     width: auto;
-    filter: grayscale(100%);
+    /* filter: grayscale(100%); */
     opacity: 0.6;
     transition: 0.5s;
 }
@@ -990,7 +999,7 @@
 }
 
 .clients .client-item:hover img {
-    filter: grayscale(0%);
+    /* filter: grayscale(0%); */
     opacity: 1;
 }
 
@@ -1098,6 +1107,7 @@
         padding: 20px;
     }
 }
+
 /*** Career End ***/
 
 
@@ -1153,6 +1163,7 @@
     color: #dc3545;
     font-weight: 600;
 }
+
 /*** Job Application Form End ***/
 
 
@@ -1206,8 +1217,15 @@
 }
 
 @keyframes floatY {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-25px); }
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-25px);
+    }
 }
 
 /* About image + floating badge */
@@ -1252,8 +1270,15 @@
 }
 
 @keyframes fadeScale {
-    0% { opacity: 0; transform: scale(0.95); }
-    100% { opacity: 1; transform: scale(1); }
+    0% {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
 }
 
 /* Stats strip */
@@ -1392,6 +1417,7 @@
         opacity: 0.05;
     }
 }
+
 /*** About Page Redesign End ***/
 /*** About Page Start ***/
 
@@ -1637,6 +1663,7 @@
         flex-shrink: 0;
     }
 }
+
 /*** Accounting Service Page End ***/
 
 
@@ -1730,6 +1757,7 @@
 .cta-strip {
     background: var(--bs-primary);
 }
+
 /*** Compliance Service Page End ***/
 
 /*** Service Page Redesign Start ***/
@@ -1771,8 +1799,15 @@
 }
 
 @keyframes floatY {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-25px); }
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-25px);
+    }
 }
 
 /* Service hero image + badge */
@@ -1817,8 +1852,15 @@
 }
 
 @keyframes fadeScale {
-    0% { opacity: 0; transform: scale(0.95); }
-    100% { opacity: 1; transform: scale(1); }
+    0% {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
 }
 
 /* Flip Cards */
@@ -2003,6 +2045,7 @@
         justify-content: center;
     }
 }
+
 /*** Service Page Redesign End ***/
 
 /*** Accounting Services Redesign Start ***/
@@ -2182,81 +2225,115 @@
         padding: 20px 12px;
     }
 }
+
 /*** Accounting Services Redesign End ***/
 
 /* Privacy page background and styling */
 .privacy-section {
-  background: linear-gradient(180deg, #f6f9fc 0%, #ffffff 100%);
-  background-image: repeating-linear-gradient(45deg, rgba(0,0,0,0.02) 0 1px, transparent 1px 20px);
-  padding-top: 60px;
-  padding-bottom: 60px;
+    background: linear-gradient(180deg, #f6f9fc 0%, #ffffff 100%);
+    background-image: repeating-linear-gradient(45deg, rgba(0, 0, 0, 0.02) 0 1px, transparent 1px 20px);
+    padding-top: 60px;
+    padding-bottom: 60px;
 }
+
 .privacy-card {
-  background: rgba(255,255,255,0.94);
-  border-radius: 14px;
-  padding: 40px 42px;
-  box-shadow: 0 10px 30px rgba(23,42,69,0.08);
-  max-width: 980px;
-  margin: 0 auto;
-  border: 1px solid rgba(15,23,42,0.04);
+    background: rgba(255, 255, 255, 0.94);
+    border-radius: 14px;
+    padding: 40px 42px;
+    box-shadow: 0 10px 30px rgba(23, 42, 69, 0.08);
+    max-width: 980px;
+    margin: 0 auto;
+    border: 1px solid rgba(15, 23, 42, 0.04);
 }
+
 .privacy-section h1 {
-  font-weight: 700;
-  color: var(--bs-dark);
-  margin-bottom: 8px;
+    font-weight: 700;
+    color: var(--bs-dark);
+    margin-bottom: 8px;
 }
+
 .privacy-divider {
-  height: 4px;
-  width: 72px;
-  border-radius: 4px;
-  background: linear-gradient(90deg, var(--bs-primary), rgba(13,110,253,0.5));
-  margin: 10px 0 22px 0;
+    height: 4px;
+    width: 72px;
+    border-radius: 4px;
+    background: linear-gradient(90deg, var(--bs-primary), rgba(13, 110, 253, 0.5));
+    margin: 10px 0 22px 0;
 }
+
 .privacy-card p {
-  font-size: 16px;
-  line-height: 1.82;
-  color: #495057;
-  margin-bottom: 1rem;
+    font-size: 16px;
+    line-height: 1.82;
+    color: #495057;
+    margin-bottom: 1rem;
 }
+
 .privacy-card h5 {
-  color: var(--bs-primary);
-  margin-top: 22px;
-  font-weight: 700;
+    color: var(--bs-primary);
+    margin-top: 22px;
+    font-weight: 700;
 }
+
 .privacy-card a {
-  color: var(--bs-primary);
-  text-decoration: underline;
+    color: var(--bs-primary);
+    text-decoration: underline;
 }
+
 .privacy-card ul {
-  margin-left: 1.2rem;
-  color: #495057;
+    margin-left: 1.2rem;
+    color: #495057;
 }
+
 .privacy-card .last-updated {
-  color: #6c757d;
-  font-size: 14px;
-  margin-top: 14px;
+    color: #6c757d;
+    font-size: 14px;
+    margin-top: 14px;
 }
+
 /* small utility for contact link emphasis */
 .contact-link {
-  display: inline-block;
-  padding: 6px 10px;
-  border-radius: 6px;
-  background: rgba(13,110,253,0.06);
-  color: var(--bs-primary);
-  font-weight: 600;
+    display: inline-block;
+    padding: 6px 10px;
+    border-radius: 6px;
+    background: rgba(13, 110, 253, 0.06);
+    color: var(--bs-primary);
+    font-weight: 600;
 }
+
 /* responsive tweaks */
 @media (max-width: 992px) {
-  .privacy-card { padding: 32px; }
+    .privacy-card {
+        padding: 32px;
+    }
 }
+
 @media (max-width: 576px) {
-  .privacy-card { padding: 20px; border-radius: 10px; }
-  .privacy-section { padding-top: 36px; padding-bottom: 36px; }
-  .privacy-card p { font-size: 15px; }
+    .privacy-card {
+        padding: 20px;
+        border-radius: 10px;
+    }
+
+    .privacy-section {
+        padding-top: 36px;
+        padding-bottom: 36px;
+    }
+
+    .privacy-card p {
+        font-size: 15px;
+    }
 }
+
 /* Print-friendly adjustments */
 @media print {
-  .privacy-section { background: none; }
-  .privacy-card { box-shadow: none; border: none; }
-  .privacy-card a { text-decoration: underline; }
+    .privacy-section {
+        background: none;
+    }
+
+    .privacy-card {
+        box-shadow: none;
+        border: none;
+    }
+
+    .privacy-card a {
+        text-decoration: underline;
+    }
 }
