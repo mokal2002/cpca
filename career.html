@@ -442,7 +442,7 @@
     <!-- Job Application Form Start -->
     <div class="container-fluid job-application py-5" id="job-application">
         <div class="container py-5">
-            <div class="text-center mx-auto pb-5" style="max-width: 750px;">
+            <div class="text-center mx-auto pb-5" id="jobFormHeading" style="max-width: 750px;">
                 <h4 class="text-primary">Apply Now</h4>
                 <h1 class="display-4 mb-4">Let's Work Together</h1>
                 <p class="mb-0">Interested in working together? Fill out some info and we will be in touch
@@ -451,7 +451,7 @@
 
             <div class="row justify-content-center">
                 <div class="col-lg-9">
-                    <div class="application-form-wrap bg-white rounded p-4 p-md-5">
+                    <div id="jobFormPanel" class="application-form-wrap bg-white rounded p-4 p-md-5">
                         <form id="jobApplicationForm" class="row g-4 needs-validation" novalidate>
                             <!-- Web3Forms required fields -->
                             <input type="hidden" name="access_key" value="2c087371-3609-4bc3-bda7-006fd0735bb9">
@@ -592,8 +592,12 @@
 
                             <!-- Submit -->
                             <div class="col-12 text-center">
-                                <button type="submit" class="btn btn-primary rounded-pill py-3 px-5">Submit
-                                    Application</button>
+                                <button type="submit" class="btn btn-primary rounded-pill py-3 px-5">
+                                    <span class="btn-label">Submit Application</span>
+                                    <span class="btn-sending d-none">
+                                        <span class="spinner-ring"></span> Submitting...
+                                    </span>
+                                </button>
                             </div>
 
                             <!-- Success / Error message -->
@@ -602,10 +606,34 @@
                             </div>
 
                         </form>
+
+                        <!-- Animated success greeting (shown after a successful submission) -->
+                        <div id="jobSuccessPanel" class="contact-success-panel d-none" role="status" aria-live="polite">
+                            <div class="success-confetti" aria-hidden="true"></div>
+                            <div class="success-checkmark" aria-hidden="true">
+                                <svg viewBox="0 0 52 52" width="90" height="90">
+                                    <circle class="checkmark-circle" cx="26" cy="26" r="24" fill="none" />
+                                    <path class="checkmark-tick" fill="none" d="M14 27l7 7 17-17" />
+                                </svg>
+                            </div>
+                            <h3 id="jobSuccessGreeting" class="mb-2">Application received!</h3>
+                            <p class="mb-4 text-muted">Thanks for applying — our team will review your details and reach
+                                out shortly.</p>
+                            <button type="button" id="jobSendAnotherBtn" class="btn btn-outline-primary px-4 py-2">Apply
+                                for another role</button>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
+    <!-- Job Application Form End -->
+
+    </form>
+    </div>
+    </div>
+    </div>
+    </div>
     </div>
     <!-- Job Application Form End -->
 

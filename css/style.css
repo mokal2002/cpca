@@ -2409,3 +2409,133 @@
 }
 
 /*** Form Submit Animation End ***/
+
+
+/*** Form Submit Animation Start ***/
+
+/* Submit button loading state */
+.btn-sending {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.spinner-ring {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    border: 2px solid rgba(255, 255, 255, .4);
+    border-top-color: #fff;
+    border-radius: 50%;
+    animation: btn-spin .6s linear infinite;
+}
+
+@keyframes btn-spin {
+    to { transform: rotate(360deg); }
+}
+
+/* Shake the form on error so it doesn't feel like a silent failure */
+.shake-error {
+    animation: shake-error .5s cubic-bezier(.36, .07, .19, .97);
+}
+
+@keyframes shake-error {
+    10%, 90% { transform: translateX(-2px); }
+    20%, 80% { transform: translateX(4px); }
+    30%, 50%, 70% { transform: translateX(-8px); }
+    40%, 60% { transform: translateX(8px); }
+}
+
+#contactFormStatus.text-danger {
+    display: inline-block;
+    animation: form-fade-up .35s ease;
+}
+
+@keyframes form-fade-up {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Panel wrapper so the form and the success state can crossfade in place */
+.contact-form-panel { position: relative; }
+
+#contactForm {
+    transition: opacity .35s ease, transform .35s ease;
+}
+
+#contactForm.form-exit {
+    opacity: 0;
+    transform: translateY(-8px) scale(.98);
+    pointer-events: none;
+}
+
+/* Success panel */
+.contact-success-panel {
+    position: relative;
+    text-align: center;
+    padding: 48px 24px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 5px 45px rgba(0, 0, 0, .06);
+    overflow: hidden;
+    animation: success-panel-in .5s cubic-bezier(.34, 1.56, .64, 1);
+}
+
+@keyframes success-panel-in {
+    0% { opacity: 0; transform: scale(.92) translateY(12px); }
+    100% { opacity: 1; transform: scale(1) translateY(0); }
+}
+
+.contact-success-panel h3 {
+    animation: form-fade-up .5s ease .15s both;
+}
+
+.contact-success-panel p,
+.contact-success-panel #sendAnotherBtn {
+    animation: form-fade-up .5s ease .25s both;
+}
+
+/* Animated checkmark (stroke-draw circle + tick) */
+.success-checkmark { margin: 0 auto 20px; width: 90px; height: 90px; }
+
+.checkmark-circle {
+    stroke: #3FAE6B;
+    stroke-width: 3;
+    stroke-dasharray: 151;
+    stroke-dashoffset: 151;
+    animation: checkmark-circle .55s cubic-bezier(.65, 0, .45, 1) forwards;
+}
+
+.checkmark-tick {
+    stroke: #3FAE6B;
+    stroke-width: 4;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-dasharray: 36;
+    stroke-dashoffset: 36;
+    animation: checkmark-tick .35s ease-in .5s forwards;
+}
+
+@keyframes checkmark-circle { 100% { stroke-dashoffset: 0; } }
+@keyframes checkmark-tick { 100% { stroke-dashoffset: 0; } }
+
+/* Lightweight confetti burst made of pure CSS, no libraries needed */
+.success-confetti { position: absolute; inset: 0; pointer-events: none; }
+
+.success-confetti span {
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    width: 8px;
+    height: 8px;
+    border-radius: 2px;
+    opacity: 0;
+    animation: confetti-burst .9s ease-out forwards;
+}
+
+@keyframes confetti-burst {
+    0% { opacity: 1; transform: translate(0, 0) rotate(0deg) scale(1); }
+    100% { opacity: 0; transform: var(--confetti-end) rotate(var(--confetti-spin)) scale(.6); }
+}
+
+/*** Form Submit Animation End ***/

@@ -230,64 +230,6 @@ $(".clients-carousel").owlCarousel({
 });
 
 
-// Job Application Form Validation
-// Job Application Form — Web3Forms Integration
-(function () {
-    "use strict";
-
-    const form = document.getElementById('jobApplicationForm');
-    if (!form) return;
-
-    const statusEl = document.getElementById('formStatus');
-    const submitBtn = form.querySelector('button[type="submit"]');
-
-    form.addEventListener('submit', function (e) {
-        e.preventDefault();
-        e.stopPropagation();
-
-        // Bootstrap validation check
-        if (!form.checkValidity()) {
-            form.classList.add('was-validated');
-            return;
-        }
-
-        // UI: loading state
-        const originalBtnText = submitBtn.innerHTML;
-        submitBtn.disabled = true;
-        submitBtn.innerHTML = 'Submitting...';
-        statusEl.textContent = '';
-        statusEl.className = '';
-
-        const formData = new FormData(form);
-
-        fetch('https://api.web3forms.com/submit', {
-            method: 'POST',
-            body: formData
-        })
-            .then(response => response.json())
-            .then(data => {
-                if (data.success) {
-                    statusEl.textContent = "Thank you! Your application has been submitted successfully. We'll be in touch shortly.";
-                    statusEl.className = "text-success mt-3";
-                    form.reset();
-                    form.classList.remove('was-validated');
-                } else {
-                    statusEl.textContent = "Something went wrong. Please try again or email us directly.";
-                    statusEl.className = "text-danger mt-3";
-                }
-            })
-            .catch(() => {
-                statusEl.textContent = "Network error. Please check your connection and try again.";
-                statusEl.className = "text-danger mt-3";
-            })
-            .finally(() => {
-                submitBtn.disabled = false;
-                submitBtn.innerHTML = originalBtnText;
-            });
-    }, false);
-
-})();
-
 
 // Contact Form — Web3Forms Integration
 (function () {
@@ -296,8 +238,73 @@ $(".clients-carousel").owlCarousel({
     const form = document.getElementById('contactForm');
     if (!form) return;
 
+    const panel = document.getElementById('contactFormPanel');
     const statusEl = document.getElementById('contactFormStatus');
     const submitBtn = form.querySelector('button[type="submit"]');
+    const btnLabel = submitBtn.querySelector('.btn-label');
+    const btnSending = submitBtn.querySelector('.btn-sending');
+    const successPanel = document.getElementById('contactSuccessPanel');
+    const successGreeting = document.getElementById('successGreeting');
+    const sendAnotherBtn = document.getElementById('sendAnotherBtn');
+    const formTitle = document.getElementById('contactFormTitle');
+    const confettiLayer = successPanel ? successPanel.querySelector('.success-confetti') : null;
+
+    // A little variety so a repeat visitor doesn't see the exact same line twice
+    const greetings = [
+        "You're all set!",
+        "Message sent!",
+        "Thanks a ton!",
+        "We've got it!",
+        "Got your message!"
+    ];
+
+    function setLoading(isLoading) {
+        submitBtn.disabled = isLoading;
+        btnLabel.classList.toggle('d-none', isLoading);
+        btnSending.classList.toggle('d-none', !isLoading);
+    }
+
+    function launchConfetti() {
+        if (!confettiLayer) return;
+        confettiLayer.innerHTML = '';
+        const colors = ['#FFC107', '#3FAE6B', '#0d6efd', '#FF6B6B', '#8E44AD'];
+        const pieceCount = 24;
+        for (let i = 0; i < pieceCount; i++) {
+            const piece = document.createElement('span');
+            const angle = (Math.PI * 2 * i) / pieceCount + Math.random() * 0.3;
+            const distance = 90 + Math.random() * 90;
+            const x = Math.cos(angle) * distance;
+            const y = Math.sin(angle) * distance - 40; // bias upward
+            piece.style.setProperty('--confetti-end', `translate(${x}px, ${y}px)`);
+            piece.style.setProperty('--confetti-spin', `${(Math.random() * 540 - 270)}deg`);
+            piece.style.background = colors[i % colors.length];
+            piece.style.animationDelay = `${Math.random() * 0.15}s`;
+            confettiLayer.appendChild(piece);
+        }
+    }
+
+    function showSuccess() {
+        if (!successPanel) return;
+        successGreeting.textContent = greetings[Math.floor(Math.random() * greetings.length)];
+
+        form.classList.add('form-exit');
+        setTimeout(() => {
+            form.classList.add('d-none');
+            if (formTitle) formTitle.classList.add('d-none');
+            successPanel.classList.remove('d-none');
+            launchConfetti();
+        }, 350);
+    }
+
+    if (sendAnotherBtn) {
+        sendAnotherBtn.addEventListener('click', function () {
+            successPanel.classList.add('d-none');
+            form.classList.remove('d-none');
+            if (formTitle) formTitle.classList.remove('d-none');
+            void form.offsetWidth;
+            form.classList.remove('form-exit');
+        });
+    }
 
     form.addEventListener('submit', function (e) {
         e.preventDefault();
@@ -305,12 +312,15 @@ $(".clients-carousel").owlCarousel({
 
         if (!form.checkValidity()) {
             form.classList.add('was-validated');
+            if (panel) {
+                panel.classList.remove('shake-error');
+                void panel.offsetWidth;
+                panel.classList.add('shake-error');
+            }
             return;
         }
 
-        const originalBtnText = submitBtn.innerHTML;
-        submitBtn.disabled = true;
-        submitBtn.innerHTML = 'Sending...';
+        setLoading(true);
         statusEl.textContent = '';
         statusEl.className = '';
 
@@ -323,22 +333,30 @@ $(".clients-carousel").owlCarousel({
             .then(response => response.json())
             .then(data => {
                 if (data.success) {
-                    statusEl.textContent = "Thank you! Your message has been sent successfully.";
-                    statusEl.className = "text-success mt-2";
                     form.reset();
                     form.classList.remove('was-validated');
+                    showSuccess();
                 } else {
                     statusEl.textContent = "Something went wrong. Please try again or email us directly.";
                     statusEl.className = "text-danger mt-2";
+                    if (panel) {
+                        panel.classList.remove('shake-error');
+                        void panel.offsetWidth;
+                        panel.classList.add('shake-error');
+                    }
                 }
             })
             .catch(() => {
                 statusEl.textContent = "Network error. Please check your connection and try again.";
                 statusEl.className = "text-danger mt-2";
+                if (panel) {
+                    panel.classList.remove('shake-error');
+                    void panel.offsetWidth;
+                    panel.classList.add('shake-error');
+                }
             })
             .finally(() => {
-                submitBtn.disabled = false;
-                submitBtn.innerHTML = originalBtnText;
+                setLoading(false);
             });
     }, false);
 
@@ -353,25 +371,90 @@ $(".clients-carousel").owlCarousel({
     const form = document.getElementById('jobApplicationForm');
     if (!form) return;
 
+    const panel = document.getElementById('jobFormPanel');
+    const heading = document.getElementById('jobFormHeading');
     const statusEl = document.getElementById('formStatus');
     const submitBtn = form.querySelector('button[type="submit"]');
-    const originalBtnText = submitBtn.innerHTML;
+    const btnLabel = submitBtn.querySelector('.btn-label');
+    const btnSending = submitBtn.querySelector('.btn-sending');
+    const successPanel = document.getElementById('jobSuccessPanel');
+    const successGreeting = document.getElementById('jobSuccessGreeting');
+    const sendAnotherBtn = document.getElementById('jobSendAnotherBtn');
+    const confettiLayer = successPanel ? successPanel.querySelector('.success-confetti') : null;
+
+    const greetings = [
+        "Application received!",
+        "You're in the queue!",
+        "Thanks for applying!",
+        "Got your application!",
+        "All set — thank you!"
+    ];
+
+    function setLoading(isLoading) {
+        submitBtn.disabled = isLoading;
+        btnLabel.classList.toggle('d-none', isLoading);
+        btnSending.classList.toggle('d-none', !isLoading);
+    }
+
+    function launchConfetti() {
+        if (!confettiLayer) return;
+        confettiLayer.innerHTML = '';
+        const colors = ['#FFC107', '#3FAE6B', '#0d6efd', '#FF6B6B', '#8E44AD'];
+        const pieceCount = 24;
+        for (let i = 0; i < pieceCount; i++) {
+            const piece = document.createElement('span');
+            const angle = (Math.PI * 2 * i) / pieceCount + Math.random() * 0.3;
+            const distance = 90 + Math.random() * 90;
+            const x = Math.cos(angle) * distance;
+            const y = Math.sin(angle) * distance - 40;
+            piece.style.setProperty('--confetti-end', `translate(${x}px, ${y}px)`);
+            piece.style.setProperty('--confetti-spin', `${(Math.random() * 540 - 270)}deg`);
+            piece.style.background = colors[i % colors.length];
+            piece.style.animationDelay = `${Math.random() * 0.15}s`;
+            confettiLayer.appendChild(piece);
+        }
+    }
+
+    function showSuccess() {
+        if (!successPanel) return;
+        successGreeting.textContent = greetings[Math.floor(Math.random() * greetings.length)];
+
+        form.classList.add('form-exit');
+        setTimeout(() => {
+            form.classList.add('d-none');
+            if (heading) heading.classList.add('d-none');
+            successPanel.classList.remove('d-none');
+            launchConfetti();
+        }, 350);
+    }
+
+    if (sendAnotherBtn) {
+        sendAnotherBtn.addEventListener('click', function () {
+            successPanel.classList.add('d-none');
+            form.classList.remove('d-none');
+            if (heading) heading.classList.remove('d-none');
+            void form.offsetWidth;
+            form.classList.remove('form-exit');
+        });
+    }
 
     form.addEventListener('submit', function (e) {
         e.preventDefault();
         e.stopPropagation();
 
-        // Bootstrap validation check
         if (!form.checkValidity()) {
             form.classList.add('was-validated');
+            if (panel) {
+                panel.classList.remove('shake-error');
+                void panel.offsetWidth;
+                panel.classList.add('shake-error');
+            }
             return;
         }
 
-        // UI: loading state with spinner
-        submitBtn.disabled = true;
-        submitBtn.innerHTML = '<span class="btn-spinner"></span>Submitting...';
+        setLoading(true);
+        statusEl.textContent = '';
         statusEl.className = '';
-        statusEl.innerHTML = '';
 
         const formData = new FormData(form);
 
@@ -382,26 +465,30 @@ $(".clients-carousel").owlCarousel({
             .then(response => response.json())
             .then(data => {
                 if (data.success) {
-                    statusEl.innerHTML =
-                        '<div class="form-success-check">' +
-                        '<svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>' +
-                        '</div>' +
-                        '<p class="mb-0">Thank you! Your application has been submitted successfully. We\'ll be in touch shortly.</p>';
-                    statusEl.className = "text-success mt-3 form-status-fade";
                     form.reset();
                     form.classList.remove('was-validated');
+                    showSuccess();
                 } else {
                     statusEl.textContent = "Something went wrong. Please try again or email us directly.";
-                    statusEl.className = "text-danger mt-3 form-status-fade";
+                    statusEl.className = "text-danger mt-3";
+                    if (panel) {
+                        panel.classList.remove('shake-error');
+                        void panel.offsetWidth;
+                        panel.classList.add('shake-error');
+                    }
                 }
             })
             .catch(() => {
                 statusEl.textContent = "Network error. Please check your connection and try again.";
-                statusEl.className = "text-danger mt-3 form-status-fade";
+                statusEl.className = "text-danger mt-3";
+                if (panel) {
+                    panel.classList.remove('shake-error');
+                    void panel.offsetWidth;
+                    panel.classList.add('shake-error');
+                }
             })
             .finally(() => {
-                submitBtn.disabled = false;
-                submitBtn.innerHTML = originalBtnText;
+                setLoading(false);
             });
     }, false);
 
