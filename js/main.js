@@ -343,3 +343,66 @@ $(".clients-carousel").owlCarousel({
     }, false);
 
 })();
+
+
+// Job Application Form Validation
+// Job Application Form — Web3Forms Integration
+(function () {
+    "use strict";
+
+    const form = document.getElementById('jobApplicationForm');
+    if (!form) return;
+
+    const statusEl = document.getElementById('formStatus');
+    const submitBtn = form.querySelector('button[type="submit"]');
+    const originalBtnText = submitBtn.innerHTML;
+
+    form.addEventListener('submit', function (e) {
+        e.preventDefault();
+        e.stopPropagation();
+
+        // Bootstrap validation check
+        if (!form.checkValidity()) {
+            form.classList.add('was-validated');
+            return;
+        }
+
+        // UI: loading state with spinner
+        submitBtn.disabled = true;
+        submitBtn.innerHTML = '<span class="btn-spinner"></span>Submitting...';
+        statusEl.className = '';
+        statusEl.innerHTML = '';
+
+        const formData = new FormData(form);
+
+        fetch('https://api.web3forms.com/submit', {
+            method: 'POST',
+            body: formData
+        })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    statusEl.innerHTML =
+                        '<div class="form-success-check">' +
+                        '<svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>' +
+                        '</div>' +
+                        '<p class="mb-0">Thank you! Your application has been submitted successfully. We\'ll be in touch shortly.</p>';
+                    statusEl.className = "text-success mt-3 form-status-fade";
+                    form.reset();
+                    form.classList.remove('was-validated');
+                } else {
+                    statusEl.textContent = "Something went wrong. Please try again or email us directly.";
+                    statusEl.className = "text-danger mt-3 form-status-fade";
+                }
+            })
+            .catch(() => {
+                statusEl.textContent = "Network error. Please check your connection and try again.";
+                statusEl.className = "text-danger mt-3 form-status-fade";
+            })
+            .finally(() => {
+                submitBtn.disabled = false;
+                submitBtn.innerHTML = originalBtnText;
+            });
+    }, false);
+
+})();

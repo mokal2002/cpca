@@ -2337,3 +2337,75 @@
         text-decoration: underline;
     }
 }
+
+
+/*** Form Submit Animation Start ***/
+.btn-spinner {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    border: 2px solid rgba(255, 255, 255, .4);
+    border-top-color: #fff;
+    border-radius: 50%;
+    margin-right: 8px;
+    vertical-align: -2px;
+    animation: btn-spin .6s linear infinite;
+}
+
+@keyframes btn-spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.form-status-fade {
+    animation: form-fade-up .45s ease;
+}
+
+@keyframes form-fade-up {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.form-success-check {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background: #3FAE6B;
+    margin: 0 auto 12px;
+    animation: form-pop-in .45s cubic-bezier(.34, 1.56, .64, 1);
+}
+
+.form-success-check svg {
+    width: 28px;
+    height: 28px;
+    stroke: #fff;
+    stroke-width: 3;
+    fill: none;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+@keyframes form-pop-in {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/*** Form Submit Animation End ***/
