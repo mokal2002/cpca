@@ -493,3 +493,19 @@ $(".clients-carousel").owlCarousel({
     }, false);
 
 })();
+
+// Announcement bar — dismiss for current view only, reappears on refresh
+(function () {
+    "use strict";
+
+    const bar = document.getElementById("announcementBar");
+    const closeBtn = document.getElementById("announcementClose");
+    if (!bar || !closeBtn) return;
+
+    closeBtn.addEventListener("click", function () {
+        bar.classList.add("hide");
+        setTimeout(function () {
+            bar.style.display = "none";
+        }, 400);
+    });
+})();
