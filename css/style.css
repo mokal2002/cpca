@@ -921,6 +921,10 @@
     transition: 0.5s;
 }
 
+.footer .footer-item a img {
+    max-height: 80px;
+}
+
 .footer .footer-item a:hover {
     color: var(--bs-primary);
 }
