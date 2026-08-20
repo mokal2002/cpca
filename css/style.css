@@ -224,6 +224,7 @@
         align-items: center;
         justify-content: end;
     }
+
     /* //added by me */
     .nav-bar .navbar-light .navbar-brand img {
         max-height: 80px;
@@ -287,20 +288,17 @@
     align-items: center;
     justify-content: center;
     transition: 0.5s;
-}
-
-.header-carousel .owl-nav .owl-prev {
     bottom: 30px;
     left: 50%;
     transform: translateX(-50%);
-    margin-left: 30px;
+}
+
+.header-carousel .owl-nav .owl-prev {
+    margin-left: -75px;
 }
 
 .header-carousel .owl-nav .owl-next {
-    bottom: 30px;
-    right: 50%;
-    transform: translateX(-50%);
-    margin-right: 30px;
+    margin-left: 75px;
 }
 
 .header-carousel .owl-nav .owl-prev:hover,
@@ -335,21 +333,19 @@
         height: 950px;
     }
 
-    .header-carousel .owl-nav .owl-prev {
+    .header-carousel .owl-nav .owl-prev,
+    .header-carousel .owl-nav .owl-next {
         bottom: -30px;
-        left: 50%;
-        transform: translateX(-50%);
+    }
+
+    .header-carousel .owl-nav .owl-prev {
         margin-left: -45px;
     }
 
     .header-carousel .owl-nav .owl-next {
-        bottom: -30px;
-        left: 50%;
-        transform: translateX(-50%);
         margin-left: 45px;
     }
 }
-
 /*** Carousel Hero Header End ***/
 
 
@@ -2435,7 +2431,9 @@
 }
 
 @keyframes btn-spin {
-    to { transform: rotate(360deg); }
+    to {
+        transform: rotate(360deg);
+    }
 }
 
 /* Shake the form on error so it doesn't feel like a silent failure */
@@ -2444,10 +2442,27 @@
 }
 
 @keyframes shake-error {
-    10%, 90% { transform: translateX(-2px); }
-    20%, 80% { transform: translateX(4px); }
-    30%, 50%, 70% { transform: translateX(-8px); }
-    40%, 60% { transform: translateX(8px); }
+
+    10%,
+    90% {
+        transform: translateX(-2px);
+    }
+
+    20%,
+    80% {
+        transform: translateX(4px);
+    }
+
+    30%,
+    50%,
+    70% {
+        transform: translateX(-8px);
+    }
+
+    40%,
+    60% {
+        transform: translateX(8px);
+    }
 }
 
 #contactFormStatus.text-danger {
@@ -2456,12 +2471,21 @@
 }
 
 @keyframes form-fade-up {
-    from { opacity: 0; transform: translateY(10px); }
-    to { opacity: 1; transform: translateY(0); }
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 /* Panel wrapper so the form and the success state can crossfade in place */
-.contact-form-panel { position: relative; }
+.contact-form-panel {
+    position: relative;
+}
 
 #contactForm {
     transition: opacity .35s ease, transform .35s ease;
@@ -2486,8 +2510,15 @@
 }
 
 @keyframes success-panel-in {
-    0% { opacity: 0; transform: scale(.92) translateY(12px); }
-    100% { opacity: 1; transform: scale(1) translateY(0); }
+    0% {
+        opacity: 0;
+        transform: scale(.92) translateY(12px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
 }
 
 .contact-success-panel h3 {
@@ -2500,7 +2531,11 @@
 }
 
 /* Animated checkmark (stroke-draw circle + tick) */
-.success-checkmark { margin: 0 auto 20px; width: 90px; height: 90px; }
+.success-checkmark {
+    margin: 0 auto 20px;
+    width: 90px;
+    height: 90px;
+}
 
 .checkmark-circle {
     stroke: #3FAE6B;
@@ -2520,11 +2555,24 @@
     animation: checkmark-tick .35s ease-in .5s forwards;
 }
 
-@keyframes checkmark-circle { 100% { stroke-dashoffset: 0; } }
-@keyframes checkmark-tick { 100% { stroke-dashoffset: 0; } }
+@keyframes checkmark-circle {
+    100% {
+        stroke-dashoffset: 0;
+    }
+}
+
+@keyframes checkmark-tick {
+    100% {
+        stroke-dashoffset: 0;
+    }
+}
 
 /* Lightweight confetti burst made of pure CSS, no libraries needed */
-.success-confetti { position: absolute; inset: 0; pointer-events: none; }
+.success-confetti {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+}
 
 .success-confetti span {
     position: absolute;
@@ -2538,8 +2586,15 @@
 }
 
 @keyframes confetti-burst {
-    0% { opacity: 1; transform: translate(0, 0) rotate(0deg) scale(1); }
-    100% { opacity: 0; transform: var(--confetti-end) rotate(var(--confetti-spin)) scale(.6); }
+    0% {
+        opacity: 1;
+        transform: translate(0, 0) rotate(0deg) scale(1);
+    }
+
+    100% {
+        opacity: 0;
+        transform: var(--confetti-end) rotate(var(--confetti-spin)) scale(.6);
+    }
 }
 
 /*** Form Submit Animation End ***/
